@@ -1,6 +1,9 @@
 # Install command line utilities
 xcode-select --install
 
+# Install oh my zsh
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
 # Install Homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
@@ -39,7 +42,7 @@ git submodule update --init
 
 # cd ~/Development/vvv/www/
 # git clone git@github.com:jeremyfelt/feedyourskull.com.git feedyourskull.com
-# 
+#
 
 # Server NAT rules for allowing VPN traffic
 # iptables -t nat -A POSTROUTING -s 10.8.0.0/24 -o eth0 -j MASQUERADE

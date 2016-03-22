@@ -6,6 +6,8 @@ export ZSH=/Users/jeremyfelt/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 ZSH_THEME="robbyrussell"
+#ZSH_THEME="agnoster"
+#ZSH_THEME="muse"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -57,6 +59,13 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
+source "`brew --prefix`/etc/profile.d/z.sh"
+source "`brew --prefix`/etc/grc.bashrc"
+
+function fix_perms {
+        find ./ -type d -exec chmod 755 {} \;
+        find ./ -type f -exec chmod 644 {} \;
+}
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8

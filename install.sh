@@ -10,10 +10,13 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 brew tap homebrew/php
 
 # Install packages with Homebrew
-brew install node grc coreutils spark z ack wget git subversion fabric openvpn mysql php56
+brew install node grc coreutils spark z ack wget git subversion fabric openvpn mysql php56 composer
 
 # Install additional packages with Homebrew's cask
-brew cask install google-chrome firefox spotify virtualbox vagrant flux cloudup slack sublime-text3 caffeine sequel-pro phpstorm harvest rescuetime google-photos-backup anki tunnelblick
+brew cask install google-chrome firefox spotify virtualbox vagrant flux cloudup slack caffeine sequel-pro phpstorm rescuetime google-photos-backup tunnelblick paw alfred atom
+
+# Secondary install
+brew cask install harvest anki
 
 # Install the latest beta of iterm2
 brew install Caskroom/versions/iterm2-beta

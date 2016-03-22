@@ -15,9 +15,6 @@ brew install node grc coreutils spark z ack wget git subversion fabric openvpn m
 # Install additional packages with Homebrew's cask
 brew cask install google-chrome firefox spotify virtualbox vagrant flux cloudup slack caffeine sequel-pro phpstorm rescuetime google-photos-backup tunnelblick paw alfred atom
 
-# Secondary install
-brew cask install harvest anki
-
 # Install the latest beta of iterm2
 brew install Caskroom/versions/iterm2-beta
 
@@ -49,10 +46,6 @@ cd ~/Development/
 git clone git@github.com:jeremyfelt/jeremyfelt.com.git jeremyfelt.com
 cd ~/Development/jeremyfelt.com
 git submodule update --init
-
-# cd ~/Development/vvv/www/
-# git clone git@github.com:jeremyfelt/feedyourskull.com.git feedyourskull.com
-#
 
 # Server NAT rules for allowing VPN traffic
 # iptables -t nat -A POSTROUTING -s 10.8.0.0/24 -o eth0 -j MASQUERADE

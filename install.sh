@@ -29,17 +29,22 @@ mkdir -p ~/Development
 # git clone https://github.com/powerline/fonts.git ~/Development/powerline-fonts/
 # sh ~/Development/powerline-fonts/install.sh
 
+vagrant plugin install vagrant-hostsupdater
+vagrant plugin install vagrant-hosts
+
 # Copy over SSH keys
 
 # Clone VVV into a directory of its own.
 cd ~/Development
 git clone git@github.com:Varying-Vagrant-Vagrants/VVV.git vvv
-cd vvv
-vagrant plugin install vagrant-hostsupdater
 
 # Clone WSUWP Platform into a directory of its own.
 cd ~/Development
-git clone git@github.com:washingtonstateuniversity/WSUWP-Platform.git
+git clone git@github.com:washingtonstateuniversity/WSUWP-Platform.git wsuwp-platform
+
+# Clone the WSU Web Provisioner repository.
+cd ~/Development
+git clone git@github.com:washingtonstateuniversity/WSU-Web-Provisioner.git wsu-web-provisioner
 
 # Clone jeremyfelt.com into a directory of its own.
 cd ~/Development/

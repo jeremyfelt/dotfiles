@@ -22,6 +22,9 @@ brew install Caskroom/versions/iterm2-beta
 # Install airsonos to provide an interface directly to sonos
 npm install -g grunt-cli airsonos
 
+# Install a monokai theme for Atom.
+apm install atom-monokai
+
 # Create the directory used for development projects.
 mkdir -p ~/Development
 

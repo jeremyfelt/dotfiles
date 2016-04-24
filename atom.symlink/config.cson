@@ -1,0 +1,16 @@
+"*":
+  core:
+    themes: [
+      "atom-dark-ui"
+      "solarized-dark-syntax"
+    ]
+  editor:
+    fontFamily: "Monaco"
+    fontSize: 12
+    invisibles: {}
+    tabLength: 4
+    tabType: "hard"
+  "exception-reporting":
+    userId: "68bc8403-a81a-7b7d-6bf5-833fbcc51ec1"
+  welcome:
+    showOnStartup: false

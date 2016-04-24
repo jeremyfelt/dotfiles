@@ -16,10 +16,36 @@ defaults write com.apple.dock static-only -bool TRUE;
 # Set the tile size for dock icons.
 defaults write com.apple.dock tilesize -int 48
 
-# Tap to click on the trackpad.
+# Trackpad -> Point & Click -> Tap to click on the trackpad.
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
 defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+
+# Trackpad -> Point & Click -> Two finger tap to right click.
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRightClick -bool true
+
+# Trackpad -> Scroll & Zoom -> Enable natural scroll direction.
+defaults write NSGlobalDomain com.apple.swipescrolldirection -bool true
+
+# Trackpad -> Scroll & Zoom -> Two finger pinch to zoom out-in.
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadPinch -bool true
+
+# Trackpad -> Scroll & Zoom -> Two finger douple tap to smart zoom.
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadTwoFingerDoubleTapGesture -bool true
+
+# Trackpad -> Scroll & Zoom -> Disable rotate.
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRotate -bool false
+
+# This should work, but does not. Three finger dragging needs to be enabled manually.
+# Accessibility -> Mouse & Trackpad -> Trackpad options -. Enable three finger dragging.
+#defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Dragging -int 1
+#defaults write com.apple.AppleMultitouchTrackpad Dragging -int 1
+#defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerDrag -boolean true
+#defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerDrag -boolean true
+
+# Tap to click on the login screen should work, but does not.
+#defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 2
+#defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 2
 
 # Disable press-and-hold for keys in favor of key repeat.
 defaults write -g ApplePressAndHoldEnabled -bool false
@@ -32,6 +58,12 @@ defaults write com.apple.Finder FXPreferredViewStyle Nlsv
 
 # Show the ~/Library folder.
 chflags nohidden ~/Library
+
+# Disable most recently used when organizing spaces.
+defaults write com.apple.dock mru-spaces -bool false
+
+# Disable Photos from opening automatically.
+defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 
 # Set a really fast key repeat.
 defaults write NSGlobalDomain KeyRepeat -int 0

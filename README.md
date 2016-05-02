@@ -55,3 +55,7 @@ this script in `bin/`.
 VVV, WSUWP Platform, jeremyfelt.com, etc...
 
 `reload!` is included to re-source new aliases, etc...
+
+## Applications to install manually
+
+* Slack

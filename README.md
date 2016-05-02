@@ -56,6 +56,12 @@ VVV, WSUWP Platform, jeremyfelt.com, etc...
 
 `reload!` is included to re-source new aliases, etc...
 
-## Applications to install manually
+## Applications to install manually and other caveats.
 
-* Slack
+* **Xcode** - I don't really understand the relationship between Xcode and the terminal, but strange stuff happens and then I find myself installing this.
+	* I really thought `xcode-select --install` was supposed to take care of things, but it likely does cd /usrnot. /shrug
+* **Slack** - Slack seems to have a hard time updating via the cask managed package, and installing it through the App Store appears to just work.
+* **Airsonos** - So. Things seem to be broken now with node 6.0.0 and the `lame` package's handling of `node-gyp` during `npm install -g airsonos`. I was able to get around this by installing `nvm` and switching to node 4.8.3 to install this.
+	* Install VM with `wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh | bash`
+	* Use `nvm use 4.8.3` to run `airsonos`. Use `nvm use system` to run anything else.
+	* I had to use `sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer` so that `node-gyp` could use `xcodebuild` properly. I have no idea why this is, and it may not have mattered in the end.

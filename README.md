@@ -51,4 +51,7 @@ defaults, and so on. Tweak this script, and occasionally run `dot` from
 time to time to keep your environment fresh and up-to-date. You can find
 this script in `bin/`.
 
+`setup-project-directories` can be used once SSH keys are available to grab
+VVV, WSUWP Platform, jeremyfelt.com, etc...
+
 `reload!` is included to re-source new aliases, etc...

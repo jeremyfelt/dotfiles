@@ -43,3 +43,8 @@ git clone git@github.com:washingtonstateuniversity/WSUWP-Plugin-Embeds.git wsuwp
 
 cd ~/Development/wsuwp-platform/www/wp-content/themes/
 git clone git@github.com:washingtonstateuniversity/wsu.edu.git wsu.edu
+
+cd ~/Development/wsuwp-platform/build-plugins/public/
+cp -fr * ~/Development/wsuwp-platform/www/wp-content/plugins/
+cd ~/Development/wsuwp-platform/build-plugins/private/
+cp -fr * ~/Development/wsuwp-platform/www/wp-content/plugins/

@@ -1,3 +1,31 @@
+#!/bin/sh
+#
+# Setup the common development file structure.
+#
+# This should be run after an SSH configuration with proper
+# keys is available.
+
+# Create the directory used for development projects.
+mkdir -p ~/Development
+
+# Clone VVV into a directory of its own.
+cd ~/Development
+git clone git@github.com:Varying-Vagrant-Vagrants/VVV.git vvv
+
+# Clone WSUWP Platform into a directory of its own.
+cd ~/Development
+git clone git@github.com:washingtonstateuniversity/WSUWP-Platform.git wsuwp-platform
+
+# Clone the WSU Web Provisioner repository.
+cd ~/Development
+git clone git@github.com:washingtonstateuniversity/WSU-Web-Provisioner.git wsu-web-provisioner
+
+# Clone jeremyfelt.com into a directory of its own.
+cd ~/Development/
+git clone git@github.com:jeremyfelt/jeremyfelt.com.git jeremyfelt.com
+cd ~/Development/jeremyfelt.com
+git submodule update --init
+
 cd ~/Development/wsuwp-platform/build-plugins/
 git clone git@github.com:washingtonstateuniversity/WSUWP-Build-Plugins-Public.git public
 git clone git@github.com:washingtonstateuniversity/WSUWP-Build-Plugins-Private.git private

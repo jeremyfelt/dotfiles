@@ -36,6 +36,14 @@ defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadTwoFin
 # Trackpad -> Scroll & Zoom -> Disable rotate.
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRotate -bool false
 
+# Mouse -> Point & Click -> Scroll direction: natural
+
+# Mouse -> Point & Click -> Secondary click: Click on right side
+defaults write NSGlobalDomain com.apple.mouse.enableSecondaryClick -bool true
+
+# Mouse -> Point & Click -> Tracking speed: fast
+
+
 # This should work, but does not. Three finger dragging needs to be enabled manually.
 # Accessibility -> Mouse & Trackpad -> Trackpad options -. Enable three finger dragging.
 #defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Dragging -int 1

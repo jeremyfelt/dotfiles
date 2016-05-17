@@ -6,7 +6,6 @@
     ]
   editor:
     fontFamily: "Monaco"
-    fontSize: 12
     invisibles: {}
     tabLength: 4
     tabType: "hard"

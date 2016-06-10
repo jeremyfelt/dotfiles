@@ -27,3 +27,4 @@ editor-cmd = vi
 ### '*' matches leading dots, e.g. '*.rej' matches '.foo.rej'.
 # global-ignores = *.o *.lo *.la *.al .libs *.so *.so.[0-9]* *.a *.pyc *.pyo __pycache__
 #   *.rej *~ #*# .#* .*.swp .DS_Store [Tt]humbs.db
+global-ignores = .idea .rej .swp .DS_Store object-cache-memcach*.php

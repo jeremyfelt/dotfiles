@@ -11,3 +11,6 @@ git/gitconfig.local.symlink
 
 subversion.symlink/auth
 subversion.symlink/README.txt
+
+wp-cli.symlink/cache
+wp-cli.symlink/packages

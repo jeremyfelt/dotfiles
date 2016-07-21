@@ -1,0 +1,6 @@
+@wsuwp:
+  ssh: wsuwp-prod-01/var/www/wordpress
+@local:
+  ssh: vagrant@10.10.50.50/var/www/wordpress
+@vvv:
+  ssh: vagrant@192.168.50.4/srv/www/wordpress-develop

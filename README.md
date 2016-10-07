@@ -36,7 +36,7 @@ Run this:
 ```sh
 git clone https://github.com/jeremyfelt/dotfiles.git ~/dotfiles
 cd ~/dotfiles
-script/bootstrap
+bash script/bootstrap
 ```
 
 This will symlink the appropriate files in `dotfiles` to your home directory.

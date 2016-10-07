@@ -5,7 +5,7 @@
       "solarized-dark-syntax"
     ]
   editor:
-    fontFamily: "Monaco"
+    fontFamily: "Monaco for Powerline"
     invisibles: {}
     tabLength: 4
     tabType: "hard"

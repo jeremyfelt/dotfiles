@@ -7,7 +7,7 @@ set -e
 cd "$(dirname $0)"/..
 
 sudo apt-get update
-sudo apt-get install composer geis-tools git indicator-systemtray-unity input-utils \
+sudo apt-get install composer geis-tools git golang indicator-systemtray-unity input-utils \
 					 nodejs npm php7.0 php7.0-xmlwriter pulseaudio-dlna spotify-client \
 					 subversion touchegg vim zsh
 

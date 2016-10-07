@@ -58,3 +58,4 @@ VVV, WSUWP Platform, jeremyfelt.com, etc...
 ## Applications to install manually and other caveats.
 
 * The Monaco for Powerline font must be installed locally. This can't be provided as part of the dotfiles repository because of licensing issues.
+* [Atom](https://github.com/atom/atom) does not automatically update in Ubuntu.

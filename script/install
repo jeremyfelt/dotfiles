@@ -6,5 +6,10 @@ set -e
 
 cd "$(dirname $0)"/..
 
+sudo apt-get update
+sudo apt-get install composer geis-tools git indicator-systemtray-unity input-utils \
+					 nodejs npm php7.0 php7.0-xmlwriter pulseaudio-dlna spotify-client \
+					 subversion touchegg vim zsh
+
 # find the installers and run them iteratively
 find . -name install.sh | while read installer ; do sh -c "${installer}" ; done

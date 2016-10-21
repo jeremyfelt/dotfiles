@@ -1,3 +1,6 @@
+mkdir ~/.npm-global
+npm config set prefix '~/.npm-global'
+
 if test ! $(which grunt-cli)
 then
   # Install grunt as a global npm package.

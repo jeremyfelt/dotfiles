@@ -6,3 +6,5 @@ then
   # Install grunt as a global npm package.
   npm install -g grunt-cli
 fi
+
+npm install -g npm-check-updates

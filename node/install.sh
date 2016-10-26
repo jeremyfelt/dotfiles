@@ -10,8 +10,4 @@ then
   npm install -g grunt-cli
 fi
 
-if test ! $(which airsonos)
-then
-  # Install airsonos to provide an interface directly to Sonos.
-  npm install -g airsonos
-fi
+npm install -g npm-check-updates

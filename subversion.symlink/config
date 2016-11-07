@@ -1,6 +1,6 @@
 ### Section for authentication and authorization customizations.
 [auth]
-password-stores = keychain
+password-stores = gnome-keyring, kwallet
 
 ###
 ### Set ssl-client-cert-file-prompt to 'yes' to cause the client

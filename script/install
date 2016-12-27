@@ -7,7 +7,7 @@ set -e
 cd "$(dirname $0)"/..
 
 sudo apt-get update
-sudo apt-get install composer fabric git golang mariadb-server nodejs nodejs-legacy npm php7.0 php7.0-mysql php7.0-xml subversion ttf-dejavu vim zsh
+sudo apt-get install cifs-utils composer fabric git golang mariadb-server nodejs nodejs-legacy npm openvpn php7.0 php7.0-mysql php7.0-xml subversion ttf-dejavu vim zsh
 
 # find the installers and run them iteratively
 find . -name install.sh | while read installer ; do sh -c "${installer}" ; done

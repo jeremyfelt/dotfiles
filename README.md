@@ -59,3 +59,7 @@ VVV, WSUWP Platform, jeremyfelt.com, etc...
 
 * The Monaco for Powerline font must be installed locally. This can't be provided as part of the dotfiles repository because of licensing issues.
 * [Atom](https://github.com/atom/atom) does not automatically update in Ubuntu.
+
+## VPN Configuration
+
+iptables -t nat -A POSTROUTING -s 10.8.0.0/24 -o eth0 -j MASQUERADE

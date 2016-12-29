@@ -7,4 +7,7 @@ then
   npm install -g grunt-cli
 fi
 
-npm install -g npm-check-updates
+if test ! $(which npm-check-updates)
+then
+  npm install -g npm-check-updates
+fi

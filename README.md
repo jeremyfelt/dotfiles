@@ -4,6 +4,11 @@ The structure and many (most?) of the files in this repository are forked
 from [Zach Holman's dotfiles](https://github.com/holman/dotfiles). See his [post on the
 subject](http://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/).
 
+## Ubuntu or OSX
+
+* The [master branch](https://github.com/jeremyfelt/dotfiles/tree/master) contains dotfiles for OSX.
+* The [ubuntu-master branch](https://github.com/jeremyfelt/dotfiles/tree/ubuntu-master) contains dotfiles for Ubuntu.
+
 ## Structure
 
 Everything's built around topic areas. If you're adding a new area to your

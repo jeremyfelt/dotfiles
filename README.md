@@ -63,6 +63,11 @@ VVV, WSUWP Platform, jeremyfelt.com, etc...
 
 ## Applications to install manually and other caveats.
 
+* **VirtualBox** - It seems smarter to install this via DMG rather than cask.
+* **Vagrant** - It also seems smarter to install this via DMG rather than cask. Also, don't forget to install the plugins.
+	* `vagrant plugin install vagrant-hostsupdater`
+	* `vagrant plugin install vagrant-hosts`
+* Once iTerm is installed, it's probably necessary to set the location of the config file to the plist in the dotfiles repository.
 * **Xcode** - I don't really understand the relationship between Xcode and the terminal, but strange stuff happens and then I find myself installing this.
 	* I really thought `xcode-select --install` was supposed to take care of things, but it likely does cd /usrnot. /shrug
 * **Slack** - Slack seems to have a hard time updating via the cask managed package, and installing it through the App Store appears to just work.

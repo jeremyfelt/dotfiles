@@ -74,7 +74,10 @@ defaults write com.apple.dock mru-spaces -bool false
 defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 
 # Set a really fast key repeat.
-defaults write NSGlobalDomain KeyRepeat -int 0
+defaults write NSGlobalDomain KeyRepeat -int 2
+
+# Set a shorter delay until repeat.
+defaults write NSGlobalDomain InitialKeyRepeat -int 25
 
 # Set the Finder prefs for showing a few different volumes on the Desktop.
 defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true

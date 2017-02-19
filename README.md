@@ -64,3 +64,11 @@ VVV, WSUWP Platform, jeremyfelt.com, etc...
 
 * The Monaco for Powerline font must be installed locally. This can't be provided as part of the dotfiles repository because of licensing issues.
 * [Atom](https://github.com/atom/atom) does not automatically update in Ubuntu.
+
+### VirtualBox
+
+The VirtualBox process *should* work through an install script, but gave me trouble the last time around, so here's what I did:
+
+1.) Download the `.deb` file from https://www.virtualbox.org/wiki/Linux_Downloads
+2.) `sudo dpkg -i ~/Downloads/nameofdebfile.deb`
+3.) `sudo apt-get install -f`

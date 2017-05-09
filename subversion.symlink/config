@@ -18,6 +18,7 @@ password-stores = gnome-keyring, kwallet
 ###   et al).
 # editor-cmd = editor (vi, emacs, notepad, etc.)
 editor-cmd = vi
+diff-cmd = colordiff
 
 ### Section for configuring miscellaneous Subversion options.
 [miscellany]

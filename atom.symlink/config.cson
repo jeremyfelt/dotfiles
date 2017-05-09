@@ -1,12 +1,15 @@
 "*":
+  "atom-beautify":
+    general:
+      _analyticsUserId: "fe0fab1b-cdbb-4aa2-b567-c057bb30a0d5"
   core:
     telemetryConsent: "limited"
     themes: [
-      "atom-dark-ui"
+      "one-dark-ui"
       "solarized-dark-syntax"
     ]
   editor:
-    fontFamily: "DejaVu Sans"
+    fontFamily: "DejaVu Sans Mono"
     invisibles: {}
     tabLength: 4
     tabType: "hard"

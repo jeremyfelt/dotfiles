@@ -685,9 +685,9 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>2049 110 445 103 0 0 2560 1417 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>643 543 1018 447 0 0 2560 1417 </string>
+	<string>643 504 918 512 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>86 684 780 622 0 0 2560 1417 </string>
+	<string>11 183 780 622 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>343 181 570 452 0 0 2560 1417 </string>
 	<key>New Bookmarks</key>
@@ -1993,8 +1993,10 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-02-19T02:48:15Z</date>
+	<date>2017-03-13T15:03:04Z</date>
 	<key>SUSendProfileInfo</key>
+	<false/>
+	<key>ShowFullScreenTabBar</key>
 	<false/>
 	<key>TabStyle</key>
 	<integer>0</integer>

@@ -18,7 +18,7 @@ password-stores = keychain
 ###   et al).
 # editor-cmd = editor (vi, emacs, notepad, etc.)
 editor-cmd = vi
-
+diff-cmd = colordiff
 ### Section for configuring miscellaneous Subversion options.
 [miscellany]
 ### Set global-ignores to a set of whitespace-delimited globs

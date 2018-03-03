@@ -2,8 +2,8 @@
   core:
     telemetryConsent: "limited"
     themes: [
-      "atom-dark-ui"
-      "solarized-dark-syntax"
+      "atom-material-ui"
+      "atom-material-syntax"
     ]
   editor:
     fontFamily: "Monaco"

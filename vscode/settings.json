@@ -1,0 +1,13 @@
+{
+    "workbench.colorTheme": "One Monokai",
+    "php.suggest.basic": false,
+    "php.validate.executablePath": "usr/local/bin/php",
+    "debug.inlineValues": true,
+    "files.autoSave": "onWindowChange",
+    "workbench.iconTheme": "vscode-icons",
+    "window.zoomLevel": 0,
+    "workbench.editor.showTabs": true,
+    "editor.renderWhitespace": "none",
+    "files.trimTrailingWhitespace": true,
+    "editor.formatOnPaste": true
+}

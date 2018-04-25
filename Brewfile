@@ -1,7 +1,6 @@
 cask_args appdir: '/Applications'
 
 tap 'homebrew/bundle'
-tap 'homebrew/php'
 
 brew 'ack'
 brew 'ansible'
@@ -16,7 +15,7 @@ brew 'mysql'
 brew 'node'
 brew 'openssl'
 brew 'openvpn'
-brew 'php71'
+brew 'php'
 brew 'python'
 brew 'subversion'
 brew 'wget'

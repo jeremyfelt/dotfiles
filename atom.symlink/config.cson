@@ -2,8 +2,8 @@
   core:
     telemetryConsent: "limited"
     themes: [
-      "atom-material-ui"
-      "atom-material-syntax"
+      "one-dark-ui"
+      "monokai"
     ]
   editor:
     fontFamily: "Monaco"

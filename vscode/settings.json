@@ -9,5 +9,5 @@
     "workbench.editor.showTabs": true,
     "editor.renderWhitespace": "none",
     "files.trimTrailingWhitespace": true,
-    "editor.formatOnPaste": true
+    "editor.formatOnPaste": false
 }

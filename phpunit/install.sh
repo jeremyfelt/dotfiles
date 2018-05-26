@@ -1,6 +1,6 @@
 #!/bin/sh
 #
 cd /tmp/
-wget https://phar.phpunit.de/phpunit.phar
-chmod +x phpunit.phar
-mv phpunit.phar /usr/local/bin/phpunit
+wget -O phpunit https://phar.phpunit.de/phpunit-6.phar
+chmod +x phpunit
+mv phpunit /usr/local/bin/phpunit

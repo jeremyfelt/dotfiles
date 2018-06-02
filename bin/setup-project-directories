@@ -12,14 +12,6 @@ mkdir -p ~/Development
 cd ~/Development
 git clone git@github.com:Varying-Vagrant-Vagrants/VVV.git vvv
 
-# Clone WSUWP Platform into a directory of its own.
-cd ~/Development
-git clone git@github.com:washingtonstateuniversity/WSUWP-Platform.git wsuwp-platform
-
-# Clone the WSU Web Provisioner repository.
-cd ~/Development
-git clone git@github.com:washingtonstateuniversity/WSU-Web-Provisioner.git wsu-web-provisioner
-
 # Clone jeremyfelt.com into a directory of its own.
 cd ~/Development/
 git clone git@github.com:jeremyfelt/jeremyfelt.com.git jeremyfelt.com
@@ -33,20 +25,3 @@ git clone git@github.com:washingtonstateuniversity/WSUWP-Build-Plugins-Public.gi
 git clone git@github.com:washingtonstateuniversity/WSUWP-Build-Plugins-Private.git private
 cd ~/Development/wsuwp-platform/build-themes/
 git clone git@github.com:washingtonstateuniversity/WSUWP-Build-Themes-Public.git public
-
-cd ~/Development/wsuwp-platform/www/wp-content/plugins/
-git clone git@github.com:washingtonstateuniversity/WSUWP-Content-Syndicate.git wsuwp-content-syndicate
-git clone git@github.com:washingtonstateuniversity/WSUWP-Content-Visibility.git wsuwp-content-visibility
-git clone git@github.com:washingtonstateuniversity/WSUWP-Admin.git wsuwp-admin
-git clone git@github.com:washingtonstateuniversity/WSUWP-Plugin-Custom-CSS.git wsuwp-custom-css
-git clone git@github.com:washingtonstateuniversity/WSUWP-Plugin-SSO-Authentication.git wsuwp-sso-authentication
-git clone git@github.com:washingtonstateuniversity/WSU-University-Taxonomy.git wsuwp-university-taxonomy
-git clone git@github.com:washingtonstateuniversity/WSUWP-Plugin-Embeds.git wsuwp-embeds
-
-cd ~/Development/wsuwp-platform/www/wp-content/themes/
-git clone git@github.com:washingtonstateuniversity/wsu.edu.git wsu.edu
-
-cd ~/Development/wsuwp-platform/build-plugins/public/
-cp -fr * ~/Development/wsuwp-platform/www/wp-content/plugins/
-cd ~/Development/wsuwp-platform/build-plugins/private/
-cp -fr * ~/Development/wsuwp-platform/www/wp-content/plugins/

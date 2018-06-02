@@ -3,7 +3,6 @@ cask_args appdir: '/Applications'
 tap 'homebrew/bundle'
 
 brew 'ack'
-brew 'ansible'
 brew 'bash-completion'
 brew 'composer'
 brew 'coreutils'

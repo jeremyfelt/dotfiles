@@ -21,7 +21,6 @@ brew 'subversion'
 brew 'wget'
 brew 'z'
 
-cask 'atom'
 cask 'alfred'
 cask 'caffeine'
 cask 'flux'

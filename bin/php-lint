@@ -1,0 +1,4 @@
+#!/bin/sh
+#
+# Use PHPCS to lint using a directory's config
+phpcs --standard=phpcs.xml.dist --extensions=php --report-full --report-summary --report-source ./

@@ -10,5 +10,7 @@
     "editor.renderWhitespace": "none",
     "files.trimTrailingWhitespace": true,
     "editor.formatOnPaste": false,
-    "editor.minimap.enabled": false
+    "editor.minimap.enabled": false,
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true
 }

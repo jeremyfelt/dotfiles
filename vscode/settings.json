@@ -4,7 +4,6 @@
     "php.validate.executablePath": "/usr/local/bin/php",
     "debug.inlineValues": true,
     "files.autoSave": "onWindowChange",
-    "workbench.iconTheme": "vscode-icons",
     "window.zoomLevel": 0,
     "workbench.editor.showTabs": true,
     "editor.renderWhitespace": "none",
@@ -12,5 +11,17 @@
     "editor.formatOnPaste": false,
     "editor.minimap.enabled": false,
     "files.insertFinalNewline": true,
-    "files.trimFinalNewlines": true
+    "files.trimFinalNewlines": true,
+    "search.exclude": {
+        "**/.git": true,
+        "**/node_modules": true,
+        "**/build": true,
+        "**/vendor": true
+    },
+    "intelephense.files.exclude": [
+        "**/.git",,
+        "**/node_modules",
+        "**/build",
+        "**/vendor"
+    ]
 }

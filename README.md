@@ -60,6 +60,9 @@ this script in `bin/`.
 * **Firefox**
 * **Chrome**
 * **Code**
+    * After installation, open VS Code and use the command palette to install the shell command.
+    * Install One Monokai theme: `code --install-extension azemoh.one-monokai`
+    * Install intelephense: `code --install-extension bmewburn.vscode-intelephense-client`
 
 ### App Store
 

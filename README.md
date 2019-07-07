@@ -73,5 +73,11 @@ this script in `bin/`.
 
 ### Caveats
 
+* Valet+ is installed via a Composer script, but these commands may need to be run manually afterward:
+    * `sudo mysql_secure_installation` (set root password)
+    * `valet fix`
+    * `valet install`
+    * Then, inside a `~/Development` directory, `valet park`
+    * Also, `valet domain test`, which I think is supposed to happen automatically?
 * **Xcode** - I don't really understand the relationship between Xcode and the terminal, but strange stuff happens and then I find myself installing this.
 	* I really thought `xcode-select --install` was supposed to take care of things, but it likely does cd /usrnot. /shrug

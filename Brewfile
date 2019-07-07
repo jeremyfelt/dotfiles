@@ -2,25 +2,27 @@ cask_args appdir: '/Applications'
 
 tap 'homebrew/bundle'
 tap 'cloudflare/cloudflare'
+tap 'henkrehorst/php'       # Used by Valet+
 
 brew 'ack'
 brew 'bash-completion'
+brew 'cloudflared'
 brew 'composer'
 brew 'coreutils'
 brew 'dnsmasq'
 brew 'git'
-brew 'grc' # Needed for `ls` to work in ZSH apparently?
+brew 'grc'                  # Needed for `ls` to work in ZSH apparently?
 brew 'imagemagick'
-brew 'mysql'
+brew 'libyaml'              # Required by Valet+
+brew 'mariadb'              # Maybe more trustworthy than Valet+'s attempt?
 brew 'node'
 brew 'openssl'
 brew 'openvpn'
-brew 'php'
 brew 'python'
 brew 'subversion'
+brew 'valet-php@7.2'        # Required by Valet+
 brew 'wget'
 brew 'z'
-brew 'cloudflared'
 
 cask 'alfred'
 cask 'caffeine'

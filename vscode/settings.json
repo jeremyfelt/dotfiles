@@ -19,7 +19,7 @@
         "**/vendor": true
     },
     "intelephense.files.exclude": [
-        "**/.git",,
+        "**/.git",
         "**/node_modules",
         "**/build",
         "**/vendor"

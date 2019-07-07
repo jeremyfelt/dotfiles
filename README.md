@@ -4,11 +4,6 @@ The structure and many (most?) of the files in this repository are forked
 from [Zach Holman's dotfiles](https://github.com/holman/dotfiles). See his [post on the
 subject](http://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/).
 
-## Ubuntu or OSX
-
-* The [master branch](https://github.com/jeremyfelt/dotfiles/tree/master) contains dotfiles for OSX.
-* The [ubuntu-master branch](https://github.com/jeremyfelt/dotfiles/tree/ubuntu-master) contains dotfiles for Ubuntu.
-
 ## Structure
 
 Everything's built around topic areas. If you're adding a new area to your
@@ -55,9 +50,6 @@ which sets up a few paths that'll be different on your particular machine.
 defaults, and so on. Tweak this script, and occasionally run `dot` from
 time to time to keep your environment fresh and up-to-date. You can find
 this script in `bin/`.
-
-`setup-project-directories` can be used once SSH keys are available to grab
-VVV, WSUWP Platform, jeremyfelt.com, etc...
 
 `reload!` is included to re-source new aliases, etc...
 

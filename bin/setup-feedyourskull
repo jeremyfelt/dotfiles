@@ -1,9 +1,0 @@
-#!/bin/sh
-#
-# Setup the common development file structure.
-#
-# This should be run after an SSH configuration with proper
-# keys is available.
-
-# Create the directory used for development projects.
-mkdir -p ~/Development

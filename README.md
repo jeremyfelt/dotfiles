@@ -63,6 +63,10 @@ this script in `bin/`.
     * After installation, open VS Code and use the command palette to install the shell command.
     * Install One Monokai theme: `code --install-extension azemoh.one-monokai`
     * Install intelephense: `code --install-extension bmewburn.vscode-intelephense-client`
+* **Zoom**
+* **Spotify**
+* **LICEcap** https://www.cockos.com/licecap/
+* **Calibre** https://calibre-ebook.com/download_osx
 
 ### App Store
 
@@ -70,6 +74,12 @@ this script in `bin/`.
 * **Harvest**
 * **Ulysses**
 * **Keynote**
+
+### Optional
+
+* Google Drive
+* Sonos
+* Sketch
 
 ### Caveats
 

@@ -7,6 +7,7 @@ brew 'ack'
 brew 'bash-completion'
 brew 'composer'
 brew 'coreutils'
+brew 'dnsmasq'
 brew 'git'
 brew 'grc' # Needed for `ls` to work in ZSH apparently?
 brew 'imagemagick'

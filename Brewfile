@@ -3,6 +3,7 @@ cask_args appdir: '/Applications'
 tap 'homebrew/bundle'
 tap 'cloudflare/cloudflare'
 tap 'henkrehorst/php'       # Used by Valet+
+tap 'saulpw/vd'             # Used by visidata
 
 brew 'ack'
 brew 'bash-completion'
@@ -21,6 +22,7 @@ brew 'openvpn'
 brew 'python'
 brew 'subversion'
 brew 'valet-php@7.2'        # Required by Valet+
+brew 'visidata'
 brew 'wget'
 brew 'z'
 

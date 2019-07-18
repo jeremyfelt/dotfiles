@@ -695,11 +695,11 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>93 54 606 456 0 0 1440 877 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>494 598 918 512 0 0 2560 1417 </string>
+	<string>619 754 796 486 0 0 3008 1669 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>281 1085 592 584 0 0 3008 1669 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>110 673 780 622 0 0 2560 1417 </string>
+	<string>0 98 1074 779 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>466 143 780 622 0 0 1440 877 </string>
 	<key>New Bookmarks</key>
@@ -1302,7 +1302,7 @@
 			<key>Screen</key>
 			<integer>-1</integer>
 			<key>Scrollback Lines</key>
-			<integer>1000</integer>
+			<integer>0</integer>
 			<key>Selected Text Color</key>
 			<dict>
 				<key>Blue Component</key>
@@ -2692,7 +2692,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2019-07-07T18:57:41Z</date>
+	<date>2019-07-11T17:25:43Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>

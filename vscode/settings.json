@@ -23,5 +23,7 @@
         "**/node_modules",
         "**/build",
         "**/vendor"
-    ]
+    ],
+    "editor.insertSpaces": false,
+    "editor.detectIndentation": false
 }

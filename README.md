@@ -67,6 +67,7 @@ this script in `bin/`.
 * **Spotify**
 * **LICEcap** https://www.cockos.com/licecap/
 * **Calibre** https://calibre-ebook.com/download_osx
+* **Cyberduck**
 
 ### App Store
 

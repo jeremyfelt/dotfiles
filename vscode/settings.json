@@ -2,7 +2,8 @@
     "workbench.colorTheme": "One Monokai",
     "php.suggest.basic": false,
     "php.validate.executablePath": "/usr/local/bin/php",
-    "debug.inlineValues": true,
+	"debug.inlineValues": true,
+	"terminal.integrated.shell.osx": "zsh",
     "files.autoSave": "onWindowChange",
     "window.zoomLevel": 0,
     "workbench.editor.showTabs": true,
@@ -25,5 +26,5 @@
         "**/vendor"
     ],
     "editor.insertSpaces": false,
-    "editor.detectIndentation": false
+	"editor.detectIndentation": false
 }

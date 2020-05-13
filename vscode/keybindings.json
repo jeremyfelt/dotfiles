@@ -1,0 +1,19 @@
+// Place your key bindings in this file to override the defaults
+[
+{ "key": "alt+cmd+down",          "command": "workbench.action.terminal.resizePaneDown",
+								  "when": "terminalFocus" },
+{ "key": "alt+cmd+right",         "command": "workbench.action.terminal.resizePaneRight",
+								  "when": "terminalFocus" },
+{ "key": "alt+cmd+up",            "command": "workbench.action.terminal.resizePaneUp",
+								  "when": "terminalFocus" },
+{ "key": "alt+cmd+left",          "command": "workbench.action.terminal.resizePaneLeft",
+								  "when": "terminalFocus" },
+{ "key": "ctrl+cmd+down",         "command": "workbench.action.terminal.focusNextPane",
+								  "when": "terminalFocus" },
+{ "key": "ctrl+cmd+left",         "command": "workbench.action.terminal.focusPreviousPane",
+  	  							  "when": "terminalFocus" },
+{ "key": "ctrl+cmd+right",        "command": "workbench.action.terminal.focusNextPane",
+								  "when": "terminalFocus" },
+{ "key": "ctrl+cmd+up",           "command": "workbench.action.terminal.focusPreviousPane",
+								  "when": "terminalFocus" }
+]

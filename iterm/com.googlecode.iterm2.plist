@@ -701,7 +701,7 @@
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>281 1085 592 584 0 0 3008 1669 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>552 621 983 656 0 0 3008 1669 </string>
+	<string>103 406 920 809 0 0 3008 1669 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>310 566 1277 843 0 0 3008 1669 </string>
 	<key>New Bookmarks</key>
@@ -2621,8 +2621,12 @@
 		<string>3.3.6</string>
 		<string>3.3.4</string>
 		<string>3.3.8</string>
+		<string>3.3.11</string>
+		<string>3.3.4</string>
 		<string>3.3.1</string>
+		<string>3.3.12</string>
 		<string>3.3.7</string>
+		<string>3.3.9</string>
 		<string>3.2.9</string>
 		<string>3.3.2</string>
 		<string>3.3.0</string>
@@ -2636,7 +2640,7 @@
 	<key>NoSyncLastTipTime</key>
 	<real>509165296.44293898</real>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>25</integer>
+	<integer>49</integer>
 	<key>NoSyncNeverAskAboutSettingAlternateMouseScroll</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
@@ -3417,9 +3421,11 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-02-10T02:00:52Z</date>
+	<date>2020-10-08T01:39:15Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
+	<key>SUUpdateGroupIdentifier</key>
+	<integer>3607298164</integer>
 	<key>SUUpdateRelaunchingMarker</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
@@ -3441,7 +3447,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.3.8</string>
+	<string>3.3.12</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>

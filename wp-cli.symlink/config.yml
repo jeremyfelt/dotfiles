@@ -1,0 +1,14 @@
+---
+valet new:
+  project: wp
+  version: latest
+  db: mysql
+  dbuser: wp
+  dbpass: wp
+  dbprefix: wp_
+  admin_user: admin
+  admin_password: admin
+@staging:
+  ssh: missingcolors.com
+  path: >
+    ~/www/magnolia.missingcolors.com/public_html

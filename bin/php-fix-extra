@@ -1,0 +1,4 @@
+#!/bin/sh
+#
+# Use PHPCBF to fix PHPCS linting errors automatically using a directory's config
+phpcbf --standard=WordPress-Extra --extensions=php --report-summary --report-source $1

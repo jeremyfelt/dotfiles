@@ -1,24 +1,20 @@
 cask_args appdir: '/Applications'
 
 tap 'homebrew/bundle'
-tap 'henkrehorst/php'       # Used by Valet+
 tap 'saulpw/vd'             # Used by visidata
 
 brew 'ack'
 brew 'bash-completion'
 brew 'composer'
 brew 'coreutils'
-brew 'dnsmasq'
 brew 'git'
 brew 'grc'                  # Needed for `ls` to work in ZSH apparently?
 brew 'imagemagick'
-brew 'libyaml'              # Required by Valet+
-brew 'mariadb'              # Maybe more trustworthy than Valet+'s attempt?
+brew 'mariadb'
 brew 'node'
 brew 'openssl'
 brew 'python'
 brew 'subversion'
-brew 'valet-php@7.4'        # Required by Valet+
 brew 'visidata'
 brew 'wget'
 brew 'z'

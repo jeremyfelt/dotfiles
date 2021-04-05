@@ -14,6 +14,11 @@ git_branch() {
 }
 
 git_dirty() {
+  # If dotfiles.hide-status is set to 1 in a repository, don't attempt
+  # to display that repos status as part of the prompt. Useful when a
+  # repo has a looooooot of files. Thanks Oh-My-Zsh for the idea.
+  [[ "$($git config --get dotfiles.hide-status 2>/dev/null)" = 1 ]] && return
+
   if $(! $git status -s &> /dev/null)
   then
     echo ""

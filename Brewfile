@@ -16,6 +16,7 @@ brew 'openssl'
 brew 'python'
 brew 'subversion'
 brew 'visidata'
+brew 'watchman'
 brew 'wget'
 brew 'z'
 

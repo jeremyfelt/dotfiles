@@ -1,0 +1,4 @@
+#!/bin/sh
+#
+# Run PHPCS on a given directory with WordPress-Docs
+phpcs -ps --standard=WordPress-Docs --exclude=Squiz.Commenting.FileComment --extensions=php $1

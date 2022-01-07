@@ -27,5 +27,9 @@
     "editor.insertSpaces": false,
 	"editor.detectIndentation": false,
 	"editor.glyphMargin": true,
-	"debug.allowBreakpointsEverywhere": true
+	"debug.allowBreakpointsEverywhere": true,
+	"intelephense.environment.includePaths": [
+		"~/Development/tooling/vendor/wp-cli/",
+		"~/Development/tooling/wordpress-ray/"
+	]
 }

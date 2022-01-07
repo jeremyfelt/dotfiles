@@ -1,4 +1,4 @@
 #!/bin/zsh
 #
 # Tail the php-fpm error log to the current terminal window
-tail -f $HOME/.config/valet/Log/php-fpm.log
+tail -n100 $HOME/.config/valet/Log/php-fpm.log

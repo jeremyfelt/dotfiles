@@ -17,9 +17,13 @@ defaults write com.apple.dock static-only -bool TRUE;
 defaults write com.apple.dock tilesize -int 48
 
 # Trackpad -> Point & Click -> Tap to click on the trackpad.
+defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true 
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
-defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
-defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+
+# These would be useful for the above, but we set them to 2 below so that
+# three finger drag can work.
+#defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -bool true
+#defaults write NSGlobalDomain com.apple.mouse.tapBehavior -bool true
 
 # Trackpad -> Point & Click -> Two finger tap to right click.
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRightClick -bool true
@@ -37,23 +41,23 @@ defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadTwoFin
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRotate -bool false
 
 # Mouse -> Point & Click -> Scroll direction: natural
+# ?
 
 # Mouse -> Point & Click -> Secondary click: Click on right side
 defaults write NSGlobalDomain com.apple.mouse.enableSecondaryClick -bool true
 
 # Mouse -> Point & Click -> Tracking speed: fast
+# ?
 
-
-# This should work, but does not. Three finger dragging needs to be enabled manually.
 # Accessibility -> Mouse & Trackpad -> Trackpad options -. Enable three finger dragging.
-#defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Dragging -int 1
-#defaults write com.apple.AppleMultitouchTrackpad Dragging -int 1
-#defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerDrag -boolean true
-#defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerDrag -boolean true
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Dragging -int 1
+defaults write com.apple.AppleMultitouchTrackpad Dragging -int 1
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerDrag -boolean true
+defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerDrag -boolean true
 
 # Tap to click on the login screen should work, but does not.
-#defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 2
-#defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 2
+defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 2
+defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 2
 
 # Disable press-and-hold for keys in favor of key repeat.
 defaults write -g ApplePressAndHoldEnabled -bool false
@@ -106,5 +110,5 @@ defaults write com.apple.screencapture location -string "${HOME}/Desktop"
 defaults write com.apple.screencapture type -string "png"
 
 # Stop local Time Machine backups and stop offering to use new drives.
-defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
-hash tmutil &> /dev/null && sudo tmutil disablelocal
+#defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
+#hash tmutil &> /dev/null && sudo tmutil disablelocal

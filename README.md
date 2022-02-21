@@ -59,20 +59,19 @@ this script in `bin/`.
 
 * **Slack**
 * **Harvest**
-* **Ulysses**
 * **GarageBand**
 * **Cyberduck**
+* **LastPass**
 
 ### Download and install
 
 * **Firefox**
-* **Thunderbird**
 * **Code**
     * After installation, open VS Code and use the command palette to install the shell command.
     * Install One Monokai theme: `code --install-extension azemoh.one-monokai`
     * Install intelephense: `code --install-extension bmewburn.vscode-intelephense-client`
 	* Install WP Hooks: `code --install-extension johnbillion.vscode-wordpress-hooks`
-	* Install PHP Debug: `code --install-extension felixfbecker.php-debug`
+	* Install PHP Debug: `code --install-extension xdebug.php-debug`
 * **Zoom**
 * **Spotify**
 * **LICEcap** https://www.cockos.com/licecap/

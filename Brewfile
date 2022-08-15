@@ -11,6 +11,7 @@ brew 'git'
 brew 'grc'                  # Needed for `ls` to work in ZSH apparently?
 brew 'imagemagick'
 brew 'libmemcache'
+brew 'mailhog'
 brew 'mariadb'
 brew 'memcached'
 brew 'node'

@@ -13,23 +13,39 @@
 	"files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "search.exclude": {
-        "**/.git": true,
-        "**/node_modules": true,
-        "**/build": true,
-        "**/vendor": true
-    },
+		"**/.git": true,
+		"**/build": true,
+		"**/node_modules": true
+	},
     "intelephense.files.exclude": [
-        "**/.git",
-        "**/node_modules",
-        "**/build",
-        "**/vendor"
-    ],
+		"**/.git",
+		"**/node_modules",
+		"**/build"
+	],
     "editor.insertSpaces": false,
 	"editor.detectIndentation": false,
 	"editor.glyphMargin": true,
 	"debug.allowBreakpointsEverywhere": true,
 	"intelephense.environment.includePaths": [
-		"~/Development/tooling/vendor/wp-cli/",
-		"~/Development/tooling/wordpress-ray/"
-	]
+		"~/Development/tooling/vendor/wp-cli/"
+	],
+	"editor.inlineSuggest.enabled": true,
+	"github.copilot.enable": {
+		"*": true,
+		"yaml": false,
+		"plaintext": false,
+		"markdown": false,
+		"json": false,
+		"html": false,
+		"php": false,
+		"javascript": false,
+		"css": false,
+		"ignore": false
+	},
+	"redhat.telemetry.enabled": false,
+	"[css]": {
+		"editor.defaultFormatter": "stylelint.vscode-stylelint"
+	},
+	"search.useIgnoreFiles": false,
+	"phpsab.composerJsonPath": "wp-content/plugins/fish-rules-api-integration/composer.json"
 }

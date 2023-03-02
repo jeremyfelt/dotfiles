@@ -96,3 +96,6 @@ this script in `bin/`.
 	* I ran `sudo chmod -R 755 /usr/local/share/zsh`, which removed the group write permissions, and it stopped showing in `compaudit`.
 	* Before doing that I had also tried `sudo chmod -R 755 /usr/local/share/zsh/site-functions`, but failed to check permissions or `compaudit` beforehand.
 	* After restarting zsh, my auto completion issue (`_complete:96: bad math expression: operand expected at end of string`) was resolved as well.
+* `ls` didn't work after a `brew upgrade` updated Python
+	* `zsh: /opt/homebrew/bin/grc: bad interpreter: /opt/homebrew/opt/python@3.10/bin/python3: no such file or directory`
+	* I ran `brew uninstall grc` and `brew install grc` and it worked.

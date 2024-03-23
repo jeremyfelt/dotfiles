@@ -1,4 +1,4 @@
 #!/bin/sh
 #
 # Run PHPCS on a given directory with WordPress-Extra rules
-phpcs -ps --standard=WordPress-Extra --extensions=php $1
+phpcs -ps --standard=HappyPrime --extensions=php $1

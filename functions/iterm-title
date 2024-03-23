@@ -1,0 +1,19 @@
+#!/bin/sh
+#
+# Fix permissions throughout a directory.
+#
+# I use this to adjust permissions to owner only on things downloaded
+# from various sources, usually plugins from the wp.org repository.
+iterm_title {
+  if [ -n "$ITERM_SESSION_ID" ]; then
+    local title=$(basename $(pwd))
+    local dev_dir=~/Development
+    local rel_path=${PWD#$dev_dir/}
+    if [ "$rel_path" != "$PWD" ] && [ -n "$rel_path" ]; then
+      title=${rel_path%%/*}
+    elif [ "$PWD" != "$HOME" ]; then
+      title=${PWD#$HOME/}
+    fi
+    export ITERM_WINDOW_TITLE=$title
+  fi
+}

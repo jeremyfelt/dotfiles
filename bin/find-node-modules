@@ -1,0 +1,5 @@
+#!/bin/sh
+#
+# Recursively find all node_modules folders and display how much space
+# they each use.
+find . -name "node_modules" -type d -prune -print | xargs du -chs

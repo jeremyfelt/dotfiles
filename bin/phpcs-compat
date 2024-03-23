@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Start from the current directory
+current_dir=$(pwd)
+files=$(pwd)
+# Traverse parent directories until the vendor/bin/phpcs executable is found
+while [[ "$current_dir" != "/" ]]; do
+    if [[ -x "$current_dir/vendor/bin/phpcs" ]]; then
+	"$current_dir/vendor/bin/phpcs" -p --extensions=php "$files" --standard=PHPCompatibility --runtime-set testVersion 8.2
+    	exit $?
+    fi
+    current_dir=$(dirname "$current_dir")
+done
+

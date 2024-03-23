@@ -5,7 +5,7 @@
 	"debug.inlineValues": true,
 	"terminal.integrated.shell.osx": "zsh",
 	"files.autoSave": "onWindowChange",
-    "workbench.editor.showTabs": true,
+    "workbench.editor.showTabs": "multiple",
     "editor.renderWhitespace": "none",
     "files.trimTrailingWhitespace": true,
     "editor.formatOnPaste": false,
@@ -13,17 +13,15 @@
 	"files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "search.exclude": {
-        "**/.git": true,
-        "**/node_modules": true,
-        "**/build": true,
-        "**/vendor": true
-    },
+		"**/.git": true,
+		"**/build": true,
+		"**/node_modules": true
+	},
     "intelephense.files.exclude": [
-        "**/.git",
-        "**/node_modules",
-        "**/build",
-        "**/vendor"
-    ],
+		"**/.git",
+		"**/node_modules",
+		"**/build"
+	],
     "editor.insertSpaces": false,
 	"editor.detectIndentation": false,
 	"editor.glyphMargin": true,
@@ -31,5 +29,19 @@
 	"intelephense.environment.includePaths": [
 		"~/Development/tooling/vendor/wp-cli/",
 		"~/Development/tooling/wordpress-ray/"
-	]
+	],
+	"redhat.telemetry.enabled": false,
+	"search.useIgnoreFiles": false,
+	"intelephense.references.exclude": [],
+	"editor.inlineSuggest.enabled": true,
+	"github.copilot.advanced": {},
+	"github.copilot.enable": {
+		"*": true,
+		"plaintext": false,
+		"markdown": true,
+		"scminput": false
+	},
+	"[css]": {
+		"editor.defaultFormatter": "aeschli.vscode-css-formatter"
+	}
 }

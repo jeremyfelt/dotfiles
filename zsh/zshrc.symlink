@@ -40,5 +40,8 @@ done
 
 unset config_files
 
-export PATH="$PATH:/usr/local/bin:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export WP_TESTS_DIR=$TMPDIR/wordpress-tests-lib
+export WP_CORE_DIR=$TMPDIR/wordpress/
+
+export PATH="$PATH:/usr/local/bin:$HOME/.rvm/bin:$HOME/.config/phpmon/bin" # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"

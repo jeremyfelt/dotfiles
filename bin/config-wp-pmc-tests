@@ -1,0 +1,4 @@
+#!/bin/sh
+#
+export PMC_PHPUNIT_BOOTSTRAP=/Users/jeremyfelt/Development/robbreportuk/wp-content/plugins/pmc-plugins/pmc-unit-test/bootstrap.php
+export WP_TESTS_DIR=/Users/jeremyfelt/Development/robbreportuk/tests/phpunit

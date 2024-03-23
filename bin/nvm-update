@@ -1,0 +1,5 @@
+#!/bin/zsh
+#
+# Use NVM to install and use the latest LTS release
+# of Node and NPM.
+nvm install --lts --latest-npm --default

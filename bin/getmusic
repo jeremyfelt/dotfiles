@@ -1,0 +1,16 @@
+#!/bin/sh
+#
+# Download an MP3 from a YouTube link.
+
+if [ "$#" -ne 1 ]; then
+    echo "Usage: $0 {YouTube URL}"
+    exit 1
+fi
+
+URL=$1
+
+# Define the output directory and filename pattern
+OUTPUT_DIR=$HOME/music
+FILENAME_PATTERN="%(creator)s-%(artist)s-%(title)s.%(ext)s"
+
+youtube-dl --extract-audio --audio-format mp3 --audio-quality 0 --output "$OUTPUT_DIR/$FILENAME_PATTERN" "$URL"

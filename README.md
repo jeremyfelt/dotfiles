@@ -85,8 +85,8 @@ this script in `bin/`.
 ### Caveats
 
 * Valet is installed via a Composer script. These commands should be run manually afterward:
-    * `valet install`
-	* `valet use php@7.4`
+    * `valet install` (defaults to PHP 8.3)
+	* `valet use php@8.2`
 	* `brew services start mariadb`
 	* Inside a `~/Development` directory, `valet park`.
 * **Xcode** - I don't really understand the relationship between Xcode and the terminal, but strange stuff happens and then I find myself installing this.

@@ -8,5 +8,5 @@ then
 	chmod +x /tmp/wp-cli.phar
 	sudo mv /tmp/wp-cli.phar /usr/local/bin/wp
 else
-	wp cli update --yes
+	sudo wp cli update --yes
 fi

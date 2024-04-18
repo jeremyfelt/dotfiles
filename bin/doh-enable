@@ -1,4 +1,0 @@
-sudo launchctl setenv TUNNEL_DNS_PORT 54
-sudo launchctl load /Library/LaunchDaemons/com.cloudflare.cloudflared.plist
-sudo brew services start dnsmasq
-networksetup -setdnsservers Wi-Fi 127.0.0.1

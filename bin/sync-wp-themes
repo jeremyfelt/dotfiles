@@ -1,9 +1,0 @@
-#!/bin/sh
-#
-# Sync any default themes from the WordPress repository with our
-# public build plugins repository.
-#
-rsync --delete -rlgDh ~/Development/wordpress/wp-content/themes/twentytwelve/ ~/Development/wsuwp-platform/build-themes/public/twentytwelve/
-rsync --delete -rlgDh ~/Development/wordpress/wp-content/themes/twentythirteen/ ~/Development/wsuwp-platform/build-themes/public/twentythirteen/
-rsync --delete -rlgDh ~/Development/wordpress/wp-content/themes/twentyfourteen/ ~/Development/wsuwp-platform/build-themes/public/twentyfourteen/
-rsync --delete -rlgDh ~/Development/wordpress/wp-content/themes/twentyfifteen/ ~/Development/wsuwp-platform/build-themes/public/twentyfifteen/

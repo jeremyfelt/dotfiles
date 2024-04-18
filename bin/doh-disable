@@ -1,3 +1,0 @@
-sudo launchctl unload /Library/LaunchDaemons/com.cloudflare.cloudflared.plist
-sudo brew services stop dnsmasq
-networksetup -setdnsservers Wi-Fi empty

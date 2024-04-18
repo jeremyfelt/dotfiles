@@ -1,3 +1,0 @@
-#!/bin/sh
-#
-export WP_TESTS_DIR=/Users/jeremyfelt/Development/wp-tests/tests

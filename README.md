@@ -57,11 +57,13 @@ this script in `bin/`.
 
 ### App Store
 
-* **Slack**
+* **Bitwarden**
 * **Harvest**
+* **NepTunes**
+* **Slack**
+* **Sequel Ace**
 * **GarageBand**
 * **Cyberduck**
-* **LastPass**
 
 ### Download and install
 
@@ -76,7 +78,6 @@ this script in `bin/`.
 * **Spotify**
 * **LICEcap** https://www.cockos.com/licecap/
 * **Calibre** https://calibre-ebook.com/download_osx
-* **Sketch**
 * **Obsidian**
 * **Sonos**
 * **Chrome**
@@ -88,7 +89,8 @@ this script in `bin/`.
     * `valet install` (defaults to PHP 8.3)
 	* `valet use php@8.2`
 	* `brew services start mariadb`
-	* Inside a `~/Development` directory, `valet park`.
+	* Inside `~/Development` directory, run `valet park` - subdirectories will now work
+	* Run `valet secure` inside one of the subdirectories and certificates will be installed.
 * **Xcode** - I don't really understand the relationship between Xcode and the terminal, but strange stuff happens and then I find myself installing this.
 	* I really thought `xcode-select --install` was supposed to take care of things, but it likely does cd /usrnot. /shrug
 * `zsh compinit: insecure directories, run compaudit for list.`

@@ -5,6 +5,7 @@ tap 'saulpw/vd'             # Used by visidata
 
 brew 'ack'
 brew 'bash-completion'
+brew 'b2-tools'
 brew 'composer'
 brew 'coreutils'
 brew 'git'
@@ -22,7 +23,6 @@ brew 'watchman'
 brew 'wget'
 brew 'z'
 
-cask 'caffeine'
 cask 'flux'
 cask 'insomnia'
 cask 'iterm2'

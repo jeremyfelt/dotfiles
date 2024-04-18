@@ -1,19 +1,28 @@
 #!/bin/sh
 #
-# Fix permissions throughout a directory.
-#
-# I use this to adjust permissions to owner only on things downloaded
-# from various sources, usually plugins from the wp.org repository.
-iterm_title {
-  if [ -n "$ITERM_SESSION_ID" ]; then
-    local title=$(basename $(pwd))
-    local dev_dir=~/Development
-    local rel_path=${PWD#$dev_dir/}
-    if [ "$rel_path" != "$PWD" ] && [ -n "$rel_path" ]; then
-      title=${rel_path%%/*}
-    elif [ "$PWD" != "$HOME" ]; then
-      title=${PWD#$HOME/}
-    fi
-    export ITERM_WINDOW_TITLE=$title
-  fi
+# Update the iterm window title to the current directory name.
+iterm_title() {
+	if [ -n "$ITERM_SESSION_ID" ]; then
+		local title=""
+		local dev_dir="$HOME/Development"
+		local rel_path="${PWD#$dev_dir/}"
+
+		# Check if we are directly in $HOME/Development or in its subdirectories.
+		if [[ "$PWD" == "$dev_dir"* ]]; then
+			# Extract the first sub-directory name under Development.
+			if [[ "$rel_path" == */* ]]; then
+				title=${rel_path%%/*}
+			else
+				title="$(basename "$PWD")"
+			fi
+		fi
+
+		# If the title is empty, default to the basename of the current directory.
+		if [ -z "$title" ]; then
+			title="$(basename "$PWD")"
+		fi
+
+		# Set the iTerm window title using ANSI escape codes.
+		echo -ne "\033]0;$title\007"
+	fi
 }

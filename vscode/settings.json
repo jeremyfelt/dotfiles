@@ -43,5 +43,11 @@
 	},
 	"[css]": {
 		"editor.defaultFormatter": "aeschli.vscode-css-formatter"
-	}
+	},
+	"extensions.ignoreRecommendations": true,
+	"editor.fontSize": 16,
+	"editor.minimap.sectionHeaderFontSize": 14,
+	"debug.console.fontSize": 14,
+	"terminal.integrated.fontSize": 14,
+	"markdown.preview.fontSize": 16
 }

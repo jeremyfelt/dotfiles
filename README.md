@@ -62,8 +62,6 @@ this script in `bin/`.
 * **NepTunes**
 * **Slack**
 * **Sequel Ace**
-* **GarageBand**
-* **Cyberduck**
 
 ### Download and install
 
@@ -76,12 +74,9 @@ this script in `bin/`.
 	* Install PHP Debug: `code --install-extension xdebug.php-debug`
 * **Zoom**
 * **Spotify**
-* **LICEcap** https://www.cockos.com/licecap/
 * **Calibre** https://calibre-ebook.com/download_osx
 * **Obsidian**
-* **Sonos**
 * **Chrome**
-* **Google Drive**
 
 ### Caveats
 

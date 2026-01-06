@@ -1,0 +1,34 @@
+#!/bin/zsh
+
+# Prompt for MySQL connection details
+read "MYSQL_USER?Enter MySQL username: "
+read -s "MYSQL_PASSWORD?Enter MySQL password: "
+echo  # Add a newline after the password input
+
+MYSQL_HOST="localhost"
+
+# Create a timestamped directory name
+TIMESTAMP=$(date +"%Y%m%d_%H%M%S")
+EXPORT_DIR="db-archive-$TIMESTAMP"
+
+# Create the export directory if it doesn't exist
+mkdir -p "$EXPORT_DIR"
+
+# Get the list of databases
+databases=$(mysql -u"$MYSQL_USER" -p"$MYSQL_PASSWORD" -h"$MYSQL_HOST" -e "SHOW DATABASES;" 2>/dev/null | grep -Ev "(Database|information_schema|performance_schema|mysql|sys)")
+
+# Check if the MySQL connection was successful
+if [ $? -ne 0 ]; then
+    echo "Error: Unable to connect to MySQL. Please check your credentials."
+    exit 1
+fi
+
+# Loop through each database and export it
+while IFS= read -r db; do
+    if [ -n "$db" ]; then
+        echo "Exporting $db"
+        mysqldump -u"$MYSQL_USER" -p"$MYSQL_PASSWORD" -h"$MYSQL_HOST" --databases "$db" > "$EXPORT_DIR/$db.sql"
+    fi
+done <<< "$databases"
+
+echo "Export completed. Files are stored in $EXPORT_DIR"

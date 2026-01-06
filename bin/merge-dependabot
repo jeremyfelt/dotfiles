@@ -1,0 +1,29 @@
+#!/usr/bin/env zsh
+
+# Check if PR numbers are provided
+if [[ -z "$1" ]]; then
+    echo "Usage: merge-dependabot <pr-number> [pr-number2] [pr-number3] ..."
+    echo "Example: merge-dependabot 3038"
+    echo "Example: merge-dependabot 12345 12346 23412"
+    exit 1
+fi
+
+# Loop through all provided PR numbers
+for pr_number in "$@"; do
+    # Validate that the argument is a number
+    if [[ ! "$pr_number" =~ ^[0-9]+$ ]]; then
+        echo "Error: '$pr_number' is not a valid PR number (must be an integer)"
+        continue
+    fi
+
+    echo "Processing PR #$pr_number..."
+
+    # Run the gh command with the provided PR number
+    if gh pr comment "$pr_number" --body "@dependabot merge"; then
+        echo "✓ Successfully commented on PR #$pr_number"
+    else
+        echo "✗ Failed to comment on PR #$pr_number"
+    fi
+
+    echo ""  # Add blank line for readability
+done

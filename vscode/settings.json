@@ -49,5 +49,8 @@
 	"editor.minimap.sectionHeaderFontSize": 14,
 	"debug.console.fontSize": 14,
 	"terminal.integrated.fontSize": 14,
-	"markdown.preview.fontSize": 16
+	"markdown.preview.fontSize": 16,
+	"github.copilot.editor.enableAutoCompletions": true,
+	"github.copilot.nextEditSuggestions.enabled": true,
+	"claudeCode.preferredLocation": "panel"
 }

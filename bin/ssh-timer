@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# Check if hostname is provided as argument
+if [ $# -eq 0 ]; then
+    read -p "Enter hostname/alias: " hostname
+else
+    hostname="$1"
+fi
+
+# Check if hostname is empty
+if [ -z "$hostname" ]; then
+    echo "Error: No hostname provided"
+    exit 1
+fi
+
+echo "Testing SSH connection to $hostname..."
+
+# Measure SSH connection time
+start_time=$(gdate +%s%3N)
+if ssh -o ConnectTimeout=10 -o BatchMode=yes "$hostname" "exit" 2>/dev/null; then
+    end_time=$(gdate +%s%3N)
+    duration=$((end_time - start_time))
+    printf "%s: %d ms\n" "$hostname" "$duration"
+else
+    end_time=$(gdate +%s%3N)
+    duration=$((end_time - start_time))
+    printf "%s: FAILED after %d ms\n" "$hostname" "$duration"
+    exit 1
+fi

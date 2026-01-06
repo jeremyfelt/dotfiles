@@ -1,0 +1,12 @@
+#!/bin/sh
+#
+# Convert an ACSM file to an EPUB file.
+
+if [ "$#" -ne 1 ]; then
+    echo "Usage: $0 {ACSM file}"
+    exit 1
+fi
+
+FILE=$1
+
+docker run -v ./adept:/home/libgourou/.adept -v $(pwd):/home/libgourou/files --rm bcliang/docker-libgourou "$FILE"

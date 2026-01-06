@@ -1,0 +1,97 @@
+#!/bin/bash
+
+# Check if destination directory is provided
+if [ $# -ne 1 ]; then
+    echo "Usage: $0 <destination_directory>"
+    echo "Example: $0 ~/Desktop/dotfiles-backup"
+    exit 1
+fi
+
+DEST_DIR="$1"
+SOURCE_DIR="$HOME"
+
+# Define directories to skip
+SKIP_DIRS=(
+    ".npm"
+    ".nvm"
+    ".cache"
+    ".Trash"
+	".browserstack"
+    ".cargo"
+    ".cups"
+    ".docker"
+	".gem"
+    ".rvm"
+	".rbenv"
+    ".pyenv"
+    ".ollama"
+)
+
+# Function to check if directory should be skipped
+should_skip() {
+    local dir_name="$1"
+    for skip_dir in "${SKIP_DIRS[@]}"; do
+        if [ "$dir_name" = "$skip_dir" ]; then
+            echo "0"  # true, should skip
+            return
+        fi
+    done
+    echo "1"  # false, should not skip
+    return
+}
+
+# Expand the destination path
+DEST_DIR=$(eval echo "$DEST_DIR")
+
+# Create destination directory if it doesn't exist
+mkdir -p "$DEST_DIR"
+
+# Check if destination directory was created successfully
+if [ ! -d "$DEST_DIR" ]; then
+    echo "Error: Could not create destination directory at $DEST_DIR"
+    exit 1
+fi
+
+echo "Starting backup of dot directories from $SOURCE_DIR to $DEST_DIR"
+
+# Initialize counters for reporting
+processed=0
+success=0
+failed=0
+
+# Find all dot directories in home directory and copy them
+for dir in "$SOURCE_DIR"/.*; do
+    # Skip . and .. directory entries
+    [ "$(basename "$dir")" = "." ] && continue
+    [ "$(basename "$dir")" = ".." ] && continue
+
+    # Only process directories
+    if [ -d "$dir" ]; then
+        ((processed++))
+        dirname=$(basename "$dir")
+        new_name="dot-${dirname#.}"
+        # Check if directory should be skipped
+        if [ "$(should_skip "$dirname")" = "0" ]; then
+            echo "Skipping: $dirname (in skip list)"
+            continue
+        fi
+
+        echo "Processing: $dirname -> $new_name"
+
+        # Copy directory with new name
+        if cp -R "$dir" "$DEST_DIR/$new_name"; then
+            echo "✓ Successfully copied $dirname to $new_name"
+            ((success++))
+        else
+            echo "✗ Failed to copy $dirname"
+            ((failed++))
+        fi
+    fi
+done
+
+echo
+echo "Backup complete!"
+echo "Total directories processed: $processed"
+echo "Successful copies: $success"
+echo "Failed copies: $failed"
+echo "Backup location: $DEST_DIR"

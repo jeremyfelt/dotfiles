@@ -1,0 +1,52 @@
+#!/bin/bash
+
+# Get current timestamp for backup directory and file names
+TIMESTAMP=$(date +"%Y%m%d-%H%M")
+BACKUP_DIR="$HOME/Desktop/${TIMESTAMP}-Development"
+DEV_DIR="$HOME/Development"
+
+# Create backup directory
+mkdir -p "$BACKUP_DIR"
+
+# Check if Development directory exists
+if [ ! -d "$DEV_DIR" ]; then
+    echo "Error: Development directory not found at $DEV_DIR"
+    exit 1
+fi
+
+# Initialize counter for progress tracking
+total_dirs=$(find "$DEV_DIR" -maxdepth 1 -type d | wc -l)
+current_dir=0
+
+echo "Starting backup of Development projects..."
+echo "Backup location: $BACKUP_DIR"
+
+# Loop through each directory in Development
+for dir in "$DEV_DIR"/*/; do
+    if [ -d "$dir" ]; then
+        # Get directory name without path
+        dirname=$(basename "$dir")
+
+        # Skip if it's the backup directory itself
+        if [ "$dirname" = "${TIMESTAMP}-Development" ]; then
+            continue
+        fi
+
+        # Update progress
+        ((current_dir++))
+        echo "[$current_dir/$total_dirs] Backing up $dirname..."
+
+        # Create tar archive
+        tar -cf "$BACKUP_DIR/${TIMESTAMP}-${dirname}.tar" -C "$DEV_DIR" "$dirname"
+
+        if [ $? -eq 0 ]; then
+            echo "✓ Successfully backed up $dirname"
+        else
+            echo "✗ Failed to backup $dirname"
+        fi
+    fi
+done
+
+echo "Backup complete!"
+echo "Total directories processed: $current_dir"
+echo "Backup location: $BACKUP_DIR"

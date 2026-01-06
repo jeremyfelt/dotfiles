@@ -23,7 +23,5 @@ brew 'watchman'
 brew 'wget'
 brew 'z'
 
-cask 'flux'
 cask 'insomnia'
-cask 'iterm2'
-cask 'sublime-text'
+cask 'ghostty'

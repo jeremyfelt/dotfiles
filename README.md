@@ -66,6 +66,7 @@ this script in `bin/`.
 ### Download and install
 
 * **Firefox**
+* **Claude**
 * **Code**
     * After installation, open VS Code and use the command palette to install the shell command.
     * Install One Monokai theme: `code --install-extension azemoh.one-monokai`
@@ -77,6 +78,11 @@ this script in `bin/`.
 * **Calibre** https://calibre-ebook.com/download_osx
 * **Obsidian**
 * **Chrome**
+* **Cleanshot X**
+* **Loom**
+* **NordVPN**
+* **Ollama**
+* **Raycast**
 
 ### Caveats
 

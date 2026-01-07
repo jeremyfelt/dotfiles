@@ -11,7 +11,6 @@ fpath=($ZSH/functions $fpath)
 
 autoload -U $ZSH/functions/*(:t)
 autoload -U add-zsh-hook
-add-zsh-hook precmd iterm-title
 
 HISTFILE=~/.zsh_history
 HISTSIZE=10000

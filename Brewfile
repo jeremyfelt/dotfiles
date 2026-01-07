@@ -1,6 +1,5 @@
 cask_args appdir: '/Applications'
 
-tap 'homebrew/bundle'
 tap 'saulpw/vd'             # Used by visidata
 
 brew 'ack'
@@ -16,10 +15,8 @@ brew 'libmemcached'
 brew 'mariadb'
 brew 'memcached'
 brew 'mole'
-brew 'ngrok'
 brew 'node'
 brew 'openssl'
-brew 'orbstack'
 brew 'python'
 brew 'rsync'
 brew 'subversion'
@@ -28,5 +25,7 @@ brew 'watchman'
 brew 'wget'
 brew 'z'
 
-cask 'insomnia'
 cask 'ghostty'
+cask 'insomnia'
+cask 'ngrok'
+cask 'orbstack'

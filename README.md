@@ -92,6 +92,7 @@ This extracts all `.tar` files from the specified directory into `~/Development`
 * **Firefox**
 * **Raycast**
 * **Claude**
+* **Zed**
 * **Code**
   * After installation, open VS Code and use the command palette to install the shell command.
   * Install One Monokai theme: `code --install-extension azemoh.one-monokai`

@@ -90,25 +90,27 @@ This extracts all `.tar` files from the specified directory into `~/Development`
 ### Download and install
 
 * **Firefox**
+* **Raycast**
 * **Claude**
 * **Code**
-    * After installation, open VS Code and use the command palette to install the shell command.
-    * Install One Monokai theme: `code --install-extension azemoh.one-monokai`
-    * Install intelephense: `code --install-extension bmewburn.vscode-intelephense-client`
+  * After installation, open VS Code and use the command palette to install the shell command.
+  * Install One Monokai theme: `code --install-extension azemoh.one-monokai`
+  * Install intelephense: `code --install-extension bmewburn.vscode-intelephense-client`
 	* Install WP Hooks: `code --install-extension johnbillion.vscode-wordpress-hooks`
 	* Install PHP Debug: `code --install-extension xdebug.php-debug`
-* **Zoom**
-* **Spotify**
-* **Calibre** https://calibre-ebook.com/download_osx
 * **Obsidian**
 * **Chrome**
 * **Cleanshot X**
+
+And then when you need them:
+* **Calibre** https://calibre-ebook.com/download_osx
 * **Loom**
 * **NordVPN**
 * **Ollama**
-* **Raycast**
+* **Spotify**
+* **Zoom**
 
-### Caveats
+### Miscellany
 
 * Valet is installed via a Composer script. These commands should be run manually afterward:
     * `valet install` (defaults to PHP 8.3)

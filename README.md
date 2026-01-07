@@ -53,6 +53,30 @@ this script in `bin/`.
 
 `reload!` is included to re-source new aliases, etc...
 
+## Development Backup & Restore
+
+Two scripts are provided to backup and restore the `~/Development` directory:
+
+### backup-development
+
+Creates timestamped tar archives of each project in `~/Development`:
+
+```sh
+backup-development
+```
+
+Archives are saved to `~/Desktop/<timestamp>-Development/` with each project as a separate tar file.
+
+### restore-development-backup
+
+Restores tar archives from a backup directory back to `~/Development`:
+
+```sh
+restore-development-backup ~/Desktop/20250106-1234-Development
+```
+
+This extracts all `.tar` files from the specified directory into `~/Development`.
+
 ## Applications to install manually and other caveats.
 
 ### App Store

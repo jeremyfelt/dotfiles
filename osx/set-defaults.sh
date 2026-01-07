@@ -115,6 +115,9 @@ defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 defaults write com.apple.screencapture location -string "${HOME}/Desktop"
 defaults write com.apple.screencapture type -string "png"
 
+# Set desktop background to solid Stone gray.
+osascript -e 'tell application "Finder" to set desktop picture to POSIX file "/System/Library/Desktop Pictures/Solid Colors/Stone.png"'
+
 # Stop local Time Machine backups and stop offering to use new drives.
 #defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 #hash tmutil &> /dev/null && sudo tmutil disablelocal

@@ -1,0 +1,62 @@
+#!/bin/bash
+
+# Restore tar archives from a backup directory to ~/Development
+
+DEV_DIR="$HOME/Development"
+
+# Check if backup directory argument is provided
+if [ -z "$1" ]; then
+    echo "Usage: restore-development-backup <backup-directory>"
+    echo "Example: restore-development-backup ~/Desktop/20250106-1234-Development"
+    exit 1
+fi
+
+BACKUP_DIR="$1"
+
+# Check if backup directory exists
+if [ ! -d "$BACKUP_DIR" ]; then
+    echo "Error: Backup directory not found at $BACKUP_DIR"
+    exit 1
+fi
+
+# Create Development directory if it doesn't exist
+mkdir -p "$DEV_DIR"
+
+# Count tar files for progress tracking
+total_files=$(find "$BACKUP_DIR" -maxdepth 1 -name "*.tar" | wc -l)
+current_file=0
+
+if [ "$total_files" -eq 0 ]; then
+    echo "Error: No tar files found in $BACKUP_DIR"
+    exit 1
+fi
+
+echo "Starting restore of Development projects..."
+echo "Source: $BACKUP_DIR"
+echo "Destination: $DEV_DIR"
+
+# Loop through each tar file in the backup directory
+for tarfile in "$BACKUP_DIR"/*.tar; do
+    if [ -f "$tarfile" ]; then
+        # Update progress
+        ((current_file++))
+
+        # Get filename without path
+        filename=$(basename "$tarfile")
+
+        echo "[$current_file/$total_files] Restoring $filename..."
+
+        # Extract tar archive to Development directory
+        tar -xf "$tarfile" -C "$DEV_DIR"
+
+        if [ $? -eq 0 ]; then
+            echo "✓ Successfully restored $filename"
+        else
+            echo "✗ Failed to restore $filename"
+        fi
+    fi
+done
+
+echo "Restore complete!"
+echo "Total archives processed: $current_file"
+echo "Restored to: $DEV_DIR"

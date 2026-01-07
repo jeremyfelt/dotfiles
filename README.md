@@ -111,14 +111,22 @@ And then when you need them:
 * **Spotify**
 * **Zoom**
 
+### Environment setup
+
+* `valet install`
+* `valet use php@8.4`
+* `brew services start mariadb`
+* `mysql` (`GRANT ALL PRIVILEGES ON *.* TO ...@localhost IDENTIFIED BY '...'`)
+* Inside `~/Development` directory, run `valet park` - subdirectories will now work
+* Run `valet secure` inside one of the subdirectories and certificates will be installed.
+
+### Restore backups
+
+* `restore-db-local {backup-dir}`
+* `restore-development-local {backup-dir}`
+
 ### Miscellany
 
-* Valet is installed via a Composer script. These commands should be run manually afterward:
-    * `valet install` (defaults to PHP 8.3)
-	* `valet use php@8.2`
-	* `brew services start mariadb`
-	* Inside `~/Development` directory, run `valet park` - subdirectories will now work
-	* Run `valet secure` inside one of the subdirectories and certificates will be installed.
 * **Xcode** - I don't really understand the relationship between Xcode and the terminal, but strange stuff happens and then I find myself installing this.
 	* I really thought `xcode-select --install` was supposed to take care of things, but it likely does cd /usrnot. /shrug
 * `zsh compinit: insecure directories, run compaudit for list.`

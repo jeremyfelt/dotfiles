@@ -1,0 +1,75 @@
+#!/bin/zsh
+
+# Restore gzipped SQL exports from a backup directory
+
+# Check if backup directory argument is provided
+if [ -z "$1" ]; then
+    echo "Usage: restore-db-local <directory-of-sql-gz-files>"
+    echo "Example: restore-db-local ~/Desktop/db-archive-20250106_123456"
+    exit 1
+fi
+
+SQL_DIR="$1"
+
+# Check if directory exists
+if [ ! -d "$SQL_DIR" ]; then
+    echo "Error: Directory not found at $SQL_DIR"
+    exit 1
+fi
+
+# Prompt for MySQL connection details
+read "MYSQL_USER?Enter MySQL username: "
+read -s "MYSQL_PASSWORD?Enter MySQL password: "
+echo  # Add a newline after the password input
+
+MYSQL_HOST="localhost"
+
+# Test MySQL connection
+if ! mysql -u"$MYSQL_USER" -p"$MYSQL_PASSWORD" -h"$MYSQL_HOST" -e "SELECT 1" >/dev/null 2>&1; then
+    echo "Error: Unable to connect to MySQL. Please check your credentials."
+    exit 1
+fi
+
+echo "Connected to MySQL successfully."
+
+# Count gz files for progress tracking
+total_files=$(find "$SQL_DIR" -maxdepth 1 -name "*.sql.gz" | wc -l | tr -d ' ')
+current_file=0
+
+if [ "$total_files" -eq 0 ]; then
+    echo "Error: No .sql.gz files found in $SQL_DIR"
+    exit 1
+fi
+
+echo "Starting restore of $total_files database(s)..."
+echo "Source: $SQL_DIR"
+echo
+
+# Loop through each gzipped SQL file
+for gz_file in "$SQL_DIR"/*.sql.gz; do
+    if [ -f "$gz_file" ]; then
+        ((current_file++))
+
+        filename=$(basename "$gz_file")
+        # Extract database name from filename (assumes format: dbname.sql.gz)
+        db_name="${filename%.sql.gz}"
+
+        echo "[$current_file/$total_files] Restoring $db_name..."
+
+        # Create database if it doesn't exist
+        mysql -u"$MYSQL_USER" -p"$MYSQL_PASSWORD" -h"$MYSQL_HOST" -e "CREATE DATABASE IF NOT EXISTS \`$db_name\`;" 2>/dev/null
+
+        # Extract and import in one step
+        gunzip -c "$gz_file" | mysql -u"$MYSQL_USER" -p"$MYSQL_PASSWORD" -h"$MYSQL_HOST" "$db_name" 2>/dev/null
+
+        if [ $? -eq 0 ]; then
+            echo "✓ Successfully restored $db_name"
+        else
+            echo "✗ Failed to restore $db_name"
+        fi
+    fi
+done
+
+echo
+echo "Restore complete!"
+echo "Total databases processed: $current_file"

@@ -6,4 +6,4 @@ subversion.symlink/README.txt
 wp-cli.symlink/cache
 wp-cli.symlink/packages
 
-Brewfile.lock.json
+.claude

@@ -1,6 +1,10 @@
 # shortcut to this dotfiles path is $ZSH
 export ZSH=$HOME/dotfiles
 
+# b2 4.4.2 has an issue when these are not exported.
+# @see https://github.com/Backblaze/B2_Command_Line_Tool/issues/1119
+export LINES; export COLUMNS;
+
 # your project folder that we can `c [tab]` to
 # export PROJECTS=~/Development
 

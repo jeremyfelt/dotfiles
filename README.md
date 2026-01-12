@@ -102,6 +102,8 @@ This extracts all `.tar` files from the specified directory into `~/Development`
 * **Obsidian**
 * **Chrome**
 * **Cleanshot X**
+* **Orbstack**
+	* Homebrew version tries to use Rosetta?
 
 And then when you need them:
 * **Calibre** https://calibre-ebook.com/download_osx

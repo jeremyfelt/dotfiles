@@ -24,7 +24,8 @@ There's a few special files in the hierarchy.
 - **topic/path.zsh**: Any file named `path.zsh` is loaded first and is
   expected to setup `$PATH` or similar.
 - **topic/completion.zsh**: Any file named `completion.zsh` is loaded
-  last and is expected to setup autocomplete.
+  last, after `compinit`. Anything that registers completions or calls
+  `compinit` itself (nvm does) belongs here, or `compinit` runs twice.
 - **topic/\*.symlink**: Any files ending in `*.symlink` get symlinked into
   your `$HOME`. This is so you can keep all of those versioned in your dotfiles
   but still keep those autoloaded files in your home directory. These get
@@ -46,10 +47,10 @@ Everything is configured and tweaked within `~/dotfiles`.
 The main file you'll want to change right off the bat is `zsh/zshrc.symlink`,
 which sets up a few paths that'll be different on your particular machine.
 
-`dot` is a simple script that installs some dependencies, sets sane OS X
-defaults, and so on. Tweak this script, and occasionally run `dot` from
-time to time to keep your environment fresh and up-to-date. You can find
-this script in `bin/`.
+`dot` installs Homebrew if needed, runs `brew bundle`, and runs each
+topic's `install.sh`. Run it from time to time to keep things current.
+`dot --defaults` also applies `osx/set-defaults.sh`, which restarts Dock
+and Finder, so it is off unless asked for. `script/bootstrap` passes it.
 
 `reload!` is included to re-source new aliases, etc...
 
@@ -95,10 +96,7 @@ This extracts all `.tar` files from the specified directory into `~/Development`
 * **Zed**
 * **Code**
   * After installation, open VS Code and use the command palette to install the shell command.
-  * Install One Monokai theme: `code --install-extension azemoh.one-monokai`
-  * Install intelephense: `code --install-extension bmewburn.vscode-intelephense-client`
-	* Install WP Hooks: `code --install-extension johnbillion.vscode-wordpress-hooks`
-	* Install PHP Debug: `code --install-extension xdebug.php-debug`
+  * Then run `dot` (or `vscode/install.sh`) to link settings and install extensions.
 * **Obsidian**
 * **Chrome**
 * **Cleanshot X**
@@ -125,12 +123,12 @@ And then when you need them:
 ### Restore backups
 
 * `restore-db-local {backup-dir}`
-* `restore-development-local {backup-dir}`
+* `restore-development-backup {backup-dir}`
 
 ### Miscellany
 
 * **Xcode** - I don't really understand the relationship between Xcode and the terminal, but strange stuff happens and then I find myself installing this.
-	* I really thought `xcode-select --install` was supposed to take care of things, but it likely does cd /usrnot. /shrug
+	* I really thought `xcode-select --install` was supposed to take care of things, but it likely does not. /shrug
 * `zsh compinit: insecure directories, run compaudit for list.`
     * I was getting this toward the end of installation and when I ran `compaudit` was told that `/usr/local/share/zsh` was insecure.
 	* I ran `sudo chmod -R 755 /usr/local/share/zsh`, which removed the group write permissions, and it stopped showing in `compaudit`.

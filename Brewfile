@@ -18,7 +18,6 @@ brew 'makecert'             # Helps when generating certs for docker or somethin
 brew 'mariadb'
 brew 'memcached'
 brew 'mole'
-brew 'node'
 brew 'nss'                  # Installs certutil, which is able to install CAs in Firefox.
 brew 'openssl'
 brew 'python'

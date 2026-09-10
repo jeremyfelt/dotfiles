@@ -24,7 +24,7 @@ success () {
 fail () {
   printf "\r\033[2K  [\033[0;31mFAIL\033[0m] $1\n"
   echo ''
-  exit
+  exit 1
 }
 
 setup_gitconfig () {
@@ -144,7 +144,7 @@ install_dotfiles
 if [ "$(uname -s)" == "Darwin" ]
 then
   info "installing dependencies"
-  if source bin/dot | while read -r data; do info "$data"; done
+  if bin/dot --defaults
   then
     success "dependencies installed"
   else

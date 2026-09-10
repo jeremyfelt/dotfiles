@@ -64,4 +64,3 @@ if [ -f '/Users/jeremyfelt/Development/gcloud/google-cloud-sdk/path.zsh.inc' ]; 
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/jeremyfelt/Development/gcloud/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/jeremyfelt/Development/gcloud/google-cloud-sdk/completion.zsh.inc'; fi
-export GH_TOKEN=$(gh auth token)

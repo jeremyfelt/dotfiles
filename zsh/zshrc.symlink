@@ -13,6 +13,9 @@ then
   source ~/.localrc
 fi
 
+# Drop duplicate PATH entries, whatever order the files below add them in.
+typeset -U path
+
 # all of our zsh files
 typeset -U config_files
 config_files=($ZSH/**/*.zsh)
@@ -52,18 +55,13 @@ unset config_files
 export WP_TESTS_DIR=$TMPDIR/wordpress-tests-lib
 export WP_CORE_DIR=$TMPDIR/wordpress/
 
-# I would assume /usr/local/bin is default? Strange.
+# path_helper adds /usr/local/bin only in login shells.
 export PATH="$PATH:/usr/local/bin"
-
-# Because Homebrew asked nicely to be first?
-export PATH="/opt/homebrew/sbin:$PATH"
+export PATH="$HOME/.local/bin:$HOME/go/bin:$PATH"
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/jeremyfelt/Development/gcloud/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/jeremyfelt/Development/gcloud/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/jeremyfelt/Development/gcloud/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/jeremyfelt/Development/gcloud/google-cloud-sdk/completion.zsh.inc'; fi
-export PATH="$HOME/.local/bin:$PATH"
-
-export PATH="$HOME/go/bin:$PATH"
 export GH_TOKEN=$(gh auth token)

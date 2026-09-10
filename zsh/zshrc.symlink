@@ -30,8 +30,16 @@ do
 done
 
 # initialize autocomplete here, otherwise functions won't be loaded
-autoload -U compinit
-compinit
+autoload -Uz compinit
+# Rescan fpath at most once a day. -C reuses ~/.zcompdump without the scan.
+stale_dump=(~/.zcompdump(N.mh+24))
+if [[ ! -f ~/.zcompdump ]] || (( ${#stale_dump} ))
+then
+  compinit
+else
+  compinit -C
+fi
+unset stale_dump
 
 # load every completion after autocomplete loads
 for file in ${(M)config_files:#*/completion.zsh}

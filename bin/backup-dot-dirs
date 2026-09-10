@@ -16,13 +16,13 @@ SKIP_DIRS=(
     ".nvm"
     ".cache"
     ".Trash"
-	".browserstack"
+    ".browserstack"
     ".cargo"
     ".cups"
     ".docker"
-	".gem"
+    ".gem"
     ".rvm"
-	".rbenv"
+    ".rbenv"
     ".pyenv"
     ".ollama"
 )
@@ -40,8 +40,8 @@ should_skip() {
     return
 }
 
-# Expand the destination path
-DEST_DIR=$(eval echo "$DEST_DIR")
+# Expand a leading ~ with a substitution rather than eval.
+DEST_DIR="${DEST_DIR/#\~/$HOME}"
 
 # Create destination directory if it doesn't exist
 mkdir -p "$DEST_DIR"

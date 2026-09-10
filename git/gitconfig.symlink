@@ -1,50 +1,48 @@
 # Local/private config goes in the include
 [include]
-        path = ~/.gitconfig.local
-[hub]
-        protocol = https
+	path = ~/.gitconfig.local
 [alias]
-        co = checkout
-        promote = !$ZSH/bin/git-promote
-        wtf     = !$ZSH/bin/git-wtf
-        rank-contributors = !$ZSH/bin/git-rank-contributors
-        delete-local-merged = !$ZSH/bin/git-delete-local-merged
-        changelog = !$ZSH/bin/git-changelog
-        count   = !git shortlog -sn
-		pr  = "!f() { git fetch -fu ${2:-origin} refs/pull/$1/head:pr/$1 && git checkout pr/$1; }; f"
-		pr-clean = "!git for-each-ref refs/heads/pr/* --format='%(refname)' | while read ref ; do branch=${ref#refs/heads/} ; git branch -D $branch ; done"
+	co = checkout
+	promote = !$ZSH/bin/git-promote
+	wtf     = !$ZSH/bin/git-wtf
+	rank-contributors = !$ZSH/bin/git-rank-contributors
+	delete-local-merged = !$ZSH/bin/git-delete-local-merged
+	changelog = !$ZSH/bin/git-changelog
+	count   = !git shortlog -sn
+	pr  = "!f() { git fetch -fu ${2:-origin} refs/pull/$1/head:pr/$1 && git checkout pr/$1; }; f"
+	pr-clean = "!git for-each-ref refs/heads/pr/* --format='%(refname)' | while read ref ; do branch=${ref#refs/heads/} ; git branch -D $branch ; done"
 [color]
-        diff = auto
-        status = auto
-        branch = auto
-        ui = true
+	diff = auto
+	status = auto
+	branch = auto
+	ui = true
 [core]
-        excludesfile = ~/.gitignore
-        editor = vim
+	excludesfile = ~/.gitignore
+	editor = vim
 	pager = delta
 [interactive]
-    diffFilter = delta --color-only
+	diffFilter = delta --color-only
 [delta]
-    line-numbers = true
-    navigate = true
+	line-numbers = true
+	navigate = true
 [merge]
-    conflictstyle = zdiff3
+	conflictstyle = zdiff3
 [diff]
-    colorMoved = default
+	colorMoved = default
 [apply]
-        whitespace = nowarn
+	whitespace = nowarn
 [mergetool]
-        keepBackup = false
+	keepBackup = false
 [difftool]
-        prompt = false
+	prompt = false
 [help]
-        autocorrect = 1
+	autocorrect = 1
 [push]
-        # See `git help config` (search for push.default)
-        # for more information on different options of the below setting.
-        #
-        # Setting to git 2.0 default to suppress warning message
-        default = simple
+	# See `git help config` (search for push.default)
+	# for more information on different options of the below setting.
+	#
+	# Setting to git 2.0 default to suppress warning message
+	default = simple
 [pull]
 	rebase = false
 [url "git@github.com:"]

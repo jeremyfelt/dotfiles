@@ -14,7 +14,7 @@ then
 fi
 
 # Drop duplicate PATH entries, whatever order the files below add them in.
-typeset -U path
+typeset -U path PATH
 
 # all of our zsh files
 typeset -U config_files

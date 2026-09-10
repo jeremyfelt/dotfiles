@@ -2,15 +2,18 @@
 #
 # NVM: https://github.com/nvm-sh/nvm
 
-if test ! $(nvm --version | grep "40.3")
-then
-  rm -rf $HOME/.nvm
-  mkdir $HOME/.nvm
-  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
-fi
+NVM_VERSION="0.40.3"
+export NVM_DIR="$HOME/.nvm"
 
-export NVM_DIR=$HOME/.nvm
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+# Load nvm before checking its version. Without this, `nvm` is undefined in a
+# fresh shell, the check always fails, and ~/.nvm gets wiped on every run.
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" --no-use
+
+if [ "$(nvm --version 2>/dev/null)" != "$NVM_VERSION" ]
+then
+  curl -o- "https://raw.githubusercontent.com/nvm-sh/nvm/v${NVM_VERSION}/install.sh" | bash
+  . "$NVM_DIR/nvm.sh" --no-use
+fi
 
 nvm install --lts --latest-npm
 nvm use --lts

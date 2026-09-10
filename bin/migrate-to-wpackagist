@@ -1,0 +1,52 @@
+#!/bin/bash
+#
+# Migrate wp-plugin packages back to wpackagist-plugin in composer.json.
+#
+# Usage: ./migrate-to-wpackagist.sh [path/to/composer.json]
+#
+# Defaults to composer.json in the current directory.
+
+set -euo pipefail
+
+COMPOSER_FILE="${1:-composer.json}"
+
+if [ ! -f "$COMPOSER_FILE" ]; then
+    echo "Error: $COMPOSER_FILE not found."
+    exit 1
+fi
+
+# Ensure the wpackagist repository is configured.
+if ! grep -q 'wpackagist.org' "$COMPOSER_FILE"; then
+    echo "Adding wpackagist.org repository..."
+    composer config repositories.wpackagist composer https://wpackagist.org
+else
+    echo "wpackagist.org repository already configured."
+fi
+
+# Extract all wp-plugin packages and their version constraints.
+packages=$(sed -n 's/.*"wp-plugin\/\([^"]*\)"[[:space:]]*:[[:space:]]*"\([^"]*\)".*/\1|\2/p' "$COMPOSER_FILE")
+
+if [ -z "$packages" ]; then
+    echo "No wp-plugin packages found in $COMPOSER_FILE."
+    exit 0
+fi
+
+echo "Found the following wp-plugin packages to migrate:"
+echo "$packages" | while IFS='|' read -r name version; do
+    echo "  wp-plugin/$name ($version) -> wpackagist-plugin/$name"
+done
+echo ""
+
+# Process each package: remove old, require new.
+echo "$packages" | while IFS='|' read -r name version; do
+    echo "Migrating $name..."
+    composer remove "wp-plugin/$name" --no-update
+    composer require "wpackagist-plugin/$name:$version" --no-update
+done
+
+echo ""
+echo "All packages updated in $COMPOSER_FILE. Running composer update..."
+composer update
+
+echo ""
+echo "Migration complete."

@@ -1,28 +1,27 @@
 {
-    "workbench.colorTheme": "One Monokai",
-    "php.suggest.basic": false,
-    "php.validate.executablePath": "/opt/homebrew/bin/php",
+	"workbench.colorTheme": "One Monokai",
+	"php.suggest.basic": false,
+	"php.validate.executablePath": "/opt/homebrew/bin/php",
 	"debug.inlineValues": true,
-	"terminal.integrated.shell.osx": "zsh",
 	"files.autoSave": "onWindowChange",
-    "workbench.editor.showTabs": "multiple",
-    "editor.renderWhitespace": "none",
-    "files.trimTrailingWhitespace": true,
-    "editor.formatOnPaste": false,
-    "editor.minimap.enabled": false,
+	"workbench.editor.showTabs": "multiple",
+	"editor.renderWhitespace": "none",
+	"files.trimTrailingWhitespace": true,
+	"editor.formatOnPaste": false,
+	"editor.minimap.enabled": false,
 	"files.insertFinalNewline": true,
-    "files.trimFinalNewlines": true,
-    "search.exclude": {
+	"files.trimFinalNewlines": true,
+	"search.exclude": {
 		"**/.git": true,
 		"**/build": true,
 		"**/node_modules": true
 	},
-    "intelephense.files.exclude": [
+	"intelephense.files.exclude": [
 		"**/.git",
 		"**/node_modules",
 		"**/build"
 	],
-    "editor.insertSpaces": false,
+	"editor.insertSpaces": false,
 	"editor.detectIndentation": false,
 	"editor.glyphMargin": true,
 	"debug.allowBreakpointsEverywhere": true,
@@ -49,7 +48,6 @@
 	"debug.console.fontSize": 14,
 	"terminal.integrated.fontSize": 14,
 	"markdown.preview.fontSize": 16,
-	"github.copilot.editor.enableAutoCompletions": true,
 	"github.copilot.nextEditSuggestions.enabled": true,
 	"claudeCode.preferredLocation": "panel",
 	"json.schemaDownload.trustedDomains": {

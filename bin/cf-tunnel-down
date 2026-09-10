@@ -1,1 +1,2 @@
+#!/bin/sh
 sudo launchctl unload -w /Library/LaunchDaemons/com.cloudflare.cloudflared.plist

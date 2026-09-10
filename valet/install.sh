@@ -1,3 +1,4 @@
+#!/bin/sh
 # Check for an existing installation of Valet
 if test ! $(which valet)
 then

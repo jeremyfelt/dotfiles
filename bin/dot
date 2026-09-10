@@ -4,13 +4,18 @@
 #
 # `dot` handles installation, updates, things like that. Run it periodically
 # to make sure you're on the latest and greatest.
+#
+# Pass --defaults to also apply macOS defaults. That step restarts Dock,
+# Finder, and SystemUIServer, so it is off unless asked for.
 export ZSH=$HOME/dotfiles
 
-# Set OS X defaults
-$ZSH/osx/set-defaults.sh
+if [ "$1" = "--defaults" ]
+then
+  "$ZSH/osx/set-defaults.sh"
+fi
 
 # Install homebrew
-$ZSH/homebrew/install.sh 2>&1
+"$ZSH/homebrew/install.sh" 2>&1
 
 # Upgrade homebrew
 echo "› brew update"
@@ -18,4 +23,4 @@ brew update
 
 # Install software
 echo "› $ZSH/script/install"
-$ZSH/script/install
+"$ZSH/script/install"

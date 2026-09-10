@@ -13,4 +13,4 @@ URL=$1
 OUTPUT_DIR=$HOME/music
 FILENAME_PATTERN="%(creator)s-%(artist)s-%(title)s.%(ext)s"
 
-youtube-dl --extract-audio --audio-format mp3 --audio-quality 0 --output "$OUTPUT_DIR/$FILENAME_PATTERN" "$URL"
+yt-dlp --extract-audio --audio-format mp3 --audio-quality 0 --output "$OUTPUT_DIR/$FILENAME_PATTERN" "$URL"

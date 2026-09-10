@@ -19,13 +19,15 @@ fi
 
 # Prompt for MySQL connection details
 read "MYSQL_USER?Enter MySQL username: "
-read -s "MYSQL_PASSWORD?Enter MySQL password: "
-echo  # Add a newline after the password input
+read -s "MYSQL_PWD?Enter MySQL password: "
+echo
+# mysql reads MYSQL_PWD, which keeps the password out of `ps`.
+export MYSQL_PWD
 
 MYSQL_HOST="localhost"
 
 # Test MySQL connection
-if ! mysql -u"$MYSQL_USER" -p"$MYSQL_PASSWORD" -h"$MYSQL_HOST" -e "SELECT 1" >/dev/null 2>&1; then
+if ! mysql -u"$MYSQL_USER" -h"$MYSQL_HOST" -e "SELECT 1" >/dev/null 2>&1; then
     echo "Error: Unable to connect to MySQL. Please check your credentials."
     exit 1
 fi
@@ -57,10 +59,10 @@ for gz_file in "$SQL_DIR"/*.sql.gz; do
         echo "[$current_file/$total_files] Restoring $db_name..."
 
         # Create database if it doesn't exist
-        mysql -u"$MYSQL_USER" -p"$MYSQL_PASSWORD" -h"$MYSQL_HOST" -e "CREATE DATABASE IF NOT EXISTS \`$db_name\`;" 2>/dev/null
+        mysql -u"$MYSQL_USER" -h"$MYSQL_HOST" -e "CREATE DATABASE IF NOT EXISTS \`$db_name\`;" 2>/dev/null
 
         # Extract and import in one step
-        gunzip -c "$gz_file" | mysql -u"$MYSQL_USER" -p"$MYSQL_PASSWORD" -h"$MYSQL_HOST" "$db_name" 2>/dev/null
+        gunzip -c "$gz_file" | mysql -u"$MYSQL_USER" -h"$MYSQL_HOST" "$db_name" 2>/dev/null
 
         if [ $? -eq 0 ]; then
             echo "✓ Successfully restored $db_name"

@@ -13,4 +13,7 @@ brew bundle
 # find the installers and run them iteratively
 find . -name install.sh | while read installer ; do echo ${installer} && sh -c "${installer}" ; done
 
-chsh -s $(which zsh)
+if [ "$SHELL" != "$(command -v zsh)" ]
+then
+  chsh -s "$(command -v zsh)"
+fi

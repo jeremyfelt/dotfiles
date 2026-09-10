@@ -1,9 +1,7 @@
 cask_args appdir: '/Applications'
 
-tap 'saulpw/vd'             # Used by visidata
 
 brew 'ack'
-brew 'bash-completion'
 brew 'b2-tools'
 brew 'composer'
 brew 'coreutils'
@@ -14,7 +12,7 @@ brew 'grc'                  # Needed for `ls` to work in ZSH apparently?
 brew 'imagemagick'
 brew 'llm'
 brew 'libmemcached'
-brew 'makecert'             # Helps when generating certs for docker or something?
+brew 'mkcert'               # Local dev certificates.
 brew 'mariadb'
 brew 'memcached'
 brew 'mole'

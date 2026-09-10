@@ -31,6 +31,7 @@ brew 'tree'
 brew 'uv'
 brew 'visidata'
 brew 'wget'
+brew 'wp-cli'
 brew 'yt-dlp'               # bin/getmusic.
 
 cask 'bruno'

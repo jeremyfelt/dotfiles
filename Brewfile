@@ -31,7 +31,8 @@ brew 'tree'
 brew 'uv'
 brew 'visidata'
 brew 'wget'
-brew 'wp-cli'
+brew 'wp-cli'               # Depends on unversioned `php`. Valet force-links php@8.4 over it, so
+                            # keep `php` pinned or an upgrade relinks 8.5 and Valet's php vanishes.
 brew 'yt-dlp'               # bin/getmusic.
 
 cask 'bruno'
